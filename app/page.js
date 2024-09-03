@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <Header/>
+      <Header format={viewport?.format}/>
       <HomeScreen viewport={viewport}/>
     </>
   );

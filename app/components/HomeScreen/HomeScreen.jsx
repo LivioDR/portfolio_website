@@ -32,8 +32,6 @@ const styles = {
 
 const HomeScreen = ({viewport}) => {
 
-    console.log(viewport)
-
     const [isPortrait, setIsPortrait] = useState(viewport.format === 'portrait' ? true : false)
 
     useEffect(()=>{

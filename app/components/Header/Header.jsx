@@ -18,14 +18,14 @@ const HeaderStyle = {
     }
 }
 
-const Header = () => {
+const Header = ({format}) => {
 
     return(
         <div style={HeaderStyle.container}>
             <h1 style={HeaderStyle.title}>
                 Livio Reinoso
             </h1>
-            <NavBar/>
+            <NavBar format={format}/>
         </div>
     )
 }

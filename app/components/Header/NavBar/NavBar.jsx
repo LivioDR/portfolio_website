@@ -1,5 +1,4 @@
 import React from "react";
-
 const NavBarStyles = {
     container: {
         color: '#D4C2FC',
@@ -11,14 +10,25 @@ const NavBarStyles = {
     }
 }
 
-const NavBar = () => {
+const NavBar = ({format}) => {
 
-    return(
-        <ul style={NavBarStyles.container}>
-            <li>About Me</li>
-            <li>Projects</li>
-            <li>Contact</li>
-        </ul>
-    )
+    if(format == 'landscape'){
+        return(
+            <ul style={NavBarStyles.container}>
+                <li>About Me</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        )
+    }
+    else{
+        return(
+            <ul style={NavBarStyles.container}>
+                <li>About Me</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        )
+    }
 }
 export default NavBar
