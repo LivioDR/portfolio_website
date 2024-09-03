@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import livioPhoto from '../../../public/LivioPhoto.JPG'
 
 const styles = {
     borderRadius: 50,
@@ -10,7 +11,7 @@ const BodyImage = ({viewportSize = {width: 20}}) => {
     const imgWidth = viewportSize.width * 0.3
     return(
         <Image
-            src={'/LivioPhoto.jpg'}
+            src={livioPhoto}
             alt={'photo of Livio Reinoso'}
             width={imgWidth}
             height={imgWidth * 1.5}
