@@ -11,9 +11,10 @@ const BodyImage = ({viewportSize = {width: 20}}) => {
     return(
         <Image
             src={'/LivioPhoto.jpg'}
-            alt={'test image'}
+            alt={'photo of Livio Reinoso'}
             width={imgWidth}
             height={imgWidth * 1.5}
+            unoptimized
             priority
             style={styles}
         />
