@@ -21,7 +21,6 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         width: '60%',
-        height: '100%',
         justifyContent: 'center',
         alignItems: 'center',
     },
