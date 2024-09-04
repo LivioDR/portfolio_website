@@ -15,7 +15,8 @@ const landscapeStyles = {
 
 const portraitStyles = {
     ...landscapeStyles,
-    margin: '5% auto'
+    margin: '10% auto 0% auto',
+    width: '50%',
 }
 
 const CTAButton = ({text = "Let's talk", functionToCall, styleToUse}) => {

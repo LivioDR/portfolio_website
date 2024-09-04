@@ -2,7 +2,7 @@ import React from "react";
 
 const styles = {
     width: '80%',
-    fontSize: '4rem',
+    fontSize: '3rem',
     textAlign: 'left',
 }
 
