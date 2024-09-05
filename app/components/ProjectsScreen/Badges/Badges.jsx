@@ -11,20 +11,16 @@ const badgeStyle = {
         borderRadius: '5px',
         border: '1px solid black',
         margin: '1%',
-        minHeight: '50px',
+        minHeight: '25px',
         backgroundColor: '#f0f0f0'
     },
     badgeContainer: {
         backgroundColor: '#0a0a0a',
         padding: '2px',
-        margin: '5px',
+        margin: '2px',
         borderRadius: '5px',
         display: 'grid',
         placeItems: 'center',
-    },
-    badge: {
-        width: '24px',
-        aspectRatio: 1,
     },
     text: {
         marginInline: '10px',
@@ -36,7 +32,7 @@ const Badges = ({name}) => {
     return(
         <div style={badgeStyle.container}>
             <div style={badgeStyle.badgeContainer}>
-                <BadgeIcons name={name} width={'48px'} height={'48px'} aspectRatio={1}/>
+                <BadgeIcons name={name} width={'20px'} height={'20px'}/>
             </div>
             <p style={badgeStyle.text}>{name}</p>
         </div>
