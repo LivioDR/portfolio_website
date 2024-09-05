@@ -6,16 +6,11 @@ const styles = {
     container: {
         width: '100%',
         padding: '5% 0%',
-        // display: 'flex',
-        // flexDirection: 'column',
-        // gap: '50px',
-        // justifyContent: 'center',
-        // alignItems: 'center',
         backgroundColor: 'var(--main-color)',
         color: 'var(--light-main)',
     },
     title: {
-        marginTop: '5%',
+        margin: '5% 0%',
         textAlign: 'center',
     },
     carouselContainer: {
@@ -32,7 +27,7 @@ const ProjectsScreen = () => {
 
     return(
         <div style={styles.container}>
-            <h1 style={styles.title}>My Projects</h1>
+            <h1 style={styles.title}>Projects</h1>
             <div style={styles.carouselContainer}>
                 {projectsInfo.map(projInfo =><ProjectsCard key={projInfo.name} info={projInfo}/>)}
             </div>
