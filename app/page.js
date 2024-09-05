@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import { ProgressBar } from "react-loader-spinner";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from "./components/Header/Header";
 import HomeScreen from "./components/HomeScreen/HomeScreen";
 import ProjectsScreen from "./components/ProjectsScreen/ProjectsScreen";
@@ -30,6 +31,7 @@ export default function Home() {
   if(viewport?.format){
     return (
       <>
+        <SpeedInsights/>
         <Header format={viewport?.format}/>
         <HomeScreen viewport={viewport}/>
         <ProjectsScreen/>
