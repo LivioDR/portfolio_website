@@ -42,11 +42,11 @@ const HomeScreen = ({viewport}) => {
         <div style={styles.container}>
             {
                 isPortrait &&
-                <div style={{...styles.column, width: '100%'}}>
-                        <Title/>
-                        <BodyText text={bodyText}/>
-                        <CTAButton styleToUse={viewport.format}/>
-                    </div>
+                <div style={{...styles.column, width: '100%', paddingBottom: '20%', paddingTop: '20%', gap: '50px'}}>
+                    <Title/>
+                    <BodyText text={bodyText}/>
+                    <CTAButton styleToUse={viewport.format}/>
+                </div>
             }
             {
                 !isPortrait &&

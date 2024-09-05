@@ -30,7 +30,7 @@ const HeaderStyle = {
     title: {
         color: 'var(--light-main)',
         marginLeft: '40px',
-        fontSize: '2em',
+        fontSize: '2.5em',
     },
     titlePortrait: {
         color: 'var(--light-main)',
