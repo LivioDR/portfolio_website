@@ -25,13 +25,13 @@ const CTAButton = ({text = "Let's talk", functionToCall, styleToUse}) => {
             <>
             {
                 styleToUse == 'landscape' && 
-                <button className={merry.className} style={landscapeStyles}>
+                <button className={merry.className} style={landscapeStyles} onClick={functionToCall}>
                     {text}
                 </button>
             }
             {
                 styleToUse == 'portrait' && 
-                <button className={merry.className} style={portraitStyles}>
+                <button className={merry.className} style={portraitStyles} onClick={functionToCall}>
                     {text}
                 </button>
             }
