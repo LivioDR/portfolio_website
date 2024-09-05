@@ -6,7 +6,7 @@ import BodyText from "./BodyText";
 import CTAButton from "./CTAButton";
 import BodyImage from "./BodyImage";
 
-const bodyText = 'Based in London, Ontario, I am further honing my skills in mobile application development through a specialized program. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.'
+const bodyText = 'Based in London, Ontario 🇨🇦. I am further honing my skills in mobile application development through a specialized program. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.'
 
 const styles = {
     container: {
