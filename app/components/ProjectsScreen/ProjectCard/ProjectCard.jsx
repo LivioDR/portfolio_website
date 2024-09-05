@@ -23,6 +23,7 @@ const cardStyles = {
     },
     desc: {
         margin: '2% auto',
+        textAlign: 'left',
     },
     imgContainer: {
         margin: '2% auto',
@@ -46,7 +47,9 @@ const cardStyles = {
 const ProjectsCard = ({info}) => {
 
     const visitWebsite = () => {
-
+        if(window){
+            window.open(info.link,'_blank')
+        }
     }
 
     return(
@@ -68,7 +71,7 @@ const ProjectsCard = ({info}) => {
                 {info.features.map(badgeName =><Badges key={badgeName+info.name} name={badgeName}/>)}
             </div>
             <div style={cardStyles.btnContainer}>
-                <CTAButton text="Visit" styleToUse={'portrait'} />
+                <CTAButton text="Visit" styleToUse={'portrait'} functionToCall={()=>{visitWebsite()}} />
             </div>
         </div>
     )
