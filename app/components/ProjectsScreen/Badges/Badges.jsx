@@ -29,9 +29,17 @@ const badgeStyle = {
 }
 
 const Badges = ({name}) => {
+
+    let customStyle = {}
+    if(name === 'expo'){
+        customStyle = {
+            backgroundColor: '#F0F0F0'
+        }
+    }
+
     return(
         <div style={badgeStyle.container}>
-            <div style={badgeStyle.badgeContainer}>
+            <div style={{...badgeStyle.badgeContainer, ...customStyle}}>
                 <BadgeIcons name={name} width={'20px'} height={'20px'}/>
             </div>
             <p style={badgeStyle.text}>{name}</p>
