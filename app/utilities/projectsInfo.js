@@ -1,12 +1,6 @@
 /**
- * TermoArgenta RPG
- * Dolar App
  * PokeBattle RPG
- * Who's That Poke?
  * CS Team Builder
- * LivioShop
- * PokeWeather
- * 
  */
 
 const imgPath = '/assets/projects'
@@ -30,35 +24,43 @@ const projects = [
     },
     {
         name: "Who's that poke?",
-        desc: 'Responsive mobile-first "Guess the pokemon" game created on React.js and build as a PWA with Firebase authentication and data storage to save the progress for each player.',
+        desc: 'Responsive mobile-first "Guess the pokemon" game created on React.js and build as a Progressive Web Application with Firebase authentication and data storage to save the progress for each player.',
         link: 'https://whosthatpoke.netlify.app/',
         img: `${imgPath}/whosthatpoke.png`,
         imgAlt: "Who's that poke screenshot",
-        features: ['React','Bootstrap','Firebase','Netlify','jQuery','GitHub'],
+        features: ['React','Bootstrap','Firebase','Netlify','jQuery','GitHub', 'PWA'],
     },
     {
-        name: 'Test project 4',
-        desc: 'My first description goes here. Lorem ipsum odor amet, consectetuer adipiscing elit. Tincidunt pharetra neque commodo tristique penatibus enim. Luctus aliquet habitasse pharetra ante nascetur sodales. Laoreet lorem purus viverra sed, mi tempor iaculis interdum.',
-        link: 'https://myDeploymentLink.com',
-        img: '/placeholder-image.webp',
-        imgAlt: '',
-        features: ['React','Firebase','Docker','Vite','Netlify'],
+        name: 'PokeWeather',
+        desc: 'Responsive weather progressive web application that tracks the user location and localizes the data based on their browser language. Data retrieved from Open-Meteo and used to display a customized pokemon GIF based on the weather conditions.',
+        link: 'https://nextpokeweather.netlify.app/',
+        img: `${imgPath}/pokeweather.png`,
+        imgAlt: 'PokeWeather app screenshot',
+        features: ['Next','PWA','Netlify','GitHub'],
     },
     {
-        name: 'Test project 5',
-        desc: 'My second description goes here. Lorem ipsum odor amet, consectetuer adipiscing elit. Tincidunt pharetra neque commodo tristique penatibus enim. Luctus aliquet habitasse pharetra ante nascetur sodales. Laoreet lorem purus viverra sed, mi tempor iaculis interdum.',
-        link: 'https://myDeploymentLink.com',
-        img: '/placeholder-image.webp',
-        imgAlt: '',
-        features: ['Node.js','GitHub','HTML','CloudFlare','Gemini'],
+        name: 'LivioShop',
+        desc: 'e-Commerce Single Page Application developed in React.js, feeded by the MercadoLibre API, with dynamic routing, auth and storage management implemented with Firebase',
+        link: 'https://livioshop.netlify.app/',
+        img: `${imgPath}/livioshop.png`,
+        imgAlt: 'LivioShop screenshot',
+        features: ['React','Firebase','Bootstrap','GitHub','Netlify'],
     },
     {
-        name: 'Test project 6',
-        desc: 'My third description goes here. Lorem ipsum odor amet, consectetuer adipiscing elit. Tincidunt pharetra neque commodo tristique penatibus enim. Luctus aliquet habitasse pharetra ante nascetur sodales. Laoreet lorem purus viverra sed, mi tempor iaculis interdum.',
-        link: 'https://myDeploymentLink.com',
-        img: '/placeholder-image.webp',
-        imgAlt: '',
-        features: ['Figma','Swift','CSS','Kotlin','Vercel','Next'],
-    }
+        name: 'NookBook',
+        desc: 'Animal Crossing companion-app protoype designed on Figma based on gathered and analyzed user data as a UI/UX case study, covering the whole design cycle including user personas, user flows, wireframes, functional prototypes and user testing.',
+        link: 'https://www.figma.com/proto/GfMMzmGvD2O18r7sQchtGD?node-id=0-1&t=ZWinYyliNAypNsNG-6',
+        img: `${imgPath}/nookbook.png`,
+        imgAlt: 'NookBook screenshot',
+        features: ['Figma'],
+    },
+    {
+        name: 'PokeBattle RPG',
+        desc: 'An idle RPG based on the retro Pokemon games from Gameboy Color, coded on React Native for mobile and Next for desktop, as a progressive web app. The player progress is stored in Firebase on a shared database between both apps.',
+        link: 'https://pokebattlerpg.netlify.app/',
+        img: `${imgPath}/pokebattle.png`,
+        imgAlt: 'PokeBattle screenshot',
+        features: ['React','expo','Firebase','GitHub','Netlify','PWA'],
+    },
 ]
 export default projects
