@@ -10,7 +10,7 @@ const styles = {
         color: 'var(--light-main)',
     },
     title: {
-        margin: '5% 0%',
+        margin: '75px 0px',
         textAlign: 'center',
     },
     carouselContainer: {
