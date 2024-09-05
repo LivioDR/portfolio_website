@@ -48,7 +48,7 @@ const projects = [
     },
     {
         name: 'NookBook',
-        desc: 'Animal Crossing companion-app protoype designed on Figma based on gathered and analyzed user data as a UI/UX case study, covering the whole design cycle including user personas, user flows, wireframes, functional prototypes and user testing.',
+        desc: 'Animal Crossing New Horizons companion-app protoype designed on Figma based on gathered and analyzed user data as a UI/UX case study. The project covered the whole design cycle including user personas, user flows, wireframes, functional prototypes and user testing.',
         link: 'https://www.figma.com/proto/GfMMzmGvD2O18r7sQchtGD?node-id=0-1&t=ZWinYyliNAypNsNG-6',
         img: `${imgPath}/nookbook.png`,
         imgAlt: 'NookBook screenshot',
