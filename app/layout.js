@@ -1,6 +1,7 @@
 import { Merriweather } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import metadataImg from './../public/MetadataLivioPhoto.JPG'
 
 const merry = Merriweather({ weight: '400', subsets: ["latin"] });
 
@@ -23,14 +24,14 @@ export default function RootLayout({ children }) {
         <meta property="og:url" content="https://www.livioreinoso.com/" />
         <meta property="og:title" content="Livio Reinoso - Front-End & Mobile Developer" />
         <meta property="og:description" content="I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake." />
-        <meta property="og:image" content="/public/MetadataLivioPhoto.JPG" />
+        <meta property="og:image" content={metadataImg} />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.livioreinoso.com/" />
         <meta property="twitter:title" content="Livio Reinoso - Front-End & Mobile Developer" />
         <meta property="twitter:description" content="I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake." />
-        <meta property="twitter:image" content="/public/MetadataLivioPhoto.JPG" />
+        <meta property="twitter:image" content={metadataImg} />
 
         {/* <!-- Meta Tags Generated with https://metatags.io --> */}
       </Head>
