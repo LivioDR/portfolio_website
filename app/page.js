@@ -7,6 +7,7 @@ import HomeScreen from "./components/HomeScreen/HomeScreen";
 import ProjectsScreen from "./components/ProjectsScreen/ProjectsScreen";
 import './globals.css'
 import ContactScreen from "./components/ContactScreen/ContactScreen";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
 
@@ -37,6 +38,7 @@ export default function Home() {
         <HomeScreen viewport={viewport}/>
         <ProjectsScreen/>
         <ContactScreen viewport={viewport}/>
+        <Footer/>
       </>
     );
   }
