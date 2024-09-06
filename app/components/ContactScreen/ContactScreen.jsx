@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import InputField from "./InputField/InputField";
-import laptopImage from '../../../public/assets/icons/laptop.png'
 import CTAButton from "../HomeScreen/CTAButton";
 import { sendEmail, validateFields } from "@/app/services/emailService";
 
@@ -98,7 +97,7 @@ const ContactScreen = ({viewport}) => {
                     <div style={{...styles.imgHolder, borderRadius: `${imgSize*0.3}px`}}>
                         <Image
                             className="floating"
-                            src={laptopImage}
+                            src={'/assets/icons/laptop.png'}
                             width={imgSize}
                             height={imgSize}
                             alt="Laptop image"
