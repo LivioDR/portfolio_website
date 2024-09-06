@@ -9,13 +9,19 @@ export const metadata = {
   title: "Livio Reinoso - Front-End & Mobile Developer",
   description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
   image: metadataImg,
-  og: {
+  openGraph: {
     type: "website",
     url: "https://www.livioreinoso.com/",
     title: "Livio Reinoso - Front-End & Mobile Developer",
+    siteName: 'Livio Reinoso - Front-End & Mobile Developer',
     description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
     image: metadataImg,
-  },
+    images: [{
+      url: './../public/MetadataLivioPhoto.JPG',
+      width: 800,
+      height: 600,
+    }]
+    },
   
   twitter: {
     card: 'summary_large_image',
