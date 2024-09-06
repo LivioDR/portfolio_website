@@ -16,8 +16,8 @@ export const metadata = {
     image: './../MetadataLivioPhoto.jpg',
     images: [{
       url: './../MetadataLivioPhoto.JPG',
-      width: 800,
-      height: 600,
+      width: 1200,
+      height: 630,
     }]
     }
 };
