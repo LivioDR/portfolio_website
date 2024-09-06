@@ -1,16 +1,39 @@
 import { Merriweather } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const merry = Merriweather({ weight: '400', subsets: ["latin"] });
 
 export const metadata = {
   title: "Livio Reinoso - Front-End & Mobile Developer",
-  description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My expertise lies in automating and streamlining operations across departments, including maintenance, sales, finance, and marketing, by developing tools using technologies such as React.js, HTML, CSS, JavaScript, Google Apps Script, and CRM tools like SalesForce and Hubspot.",
+  description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        {/* <!-- Primary Meta Tags --> */}
+        <title>Livio Reinoso - Front-End & Mobile Developer</title>
+        <meta name="title" content="Livio Reinoso - Front-End & Mobile Developer" />
+        <meta name="description" content="I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake." />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.livioreinoso.com/" />
+        <meta property="og:title" content="Livio Reinoso - Front-End & Mobile Developer" />
+        <meta property="og:description" content="I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake." />
+        <meta property="og:image" content="/public/MetadataLivioPhoto.JPG" />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.livioreinoso.com/" />
+        <meta property="twitter:title" content="Livio Reinoso - Front-End & Mobile Developer" />
+        <meta property="twitter:description" content="I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake." />
+        <meta property="twitter:image" content="/public/MetadataLivioPhoto.JPG" />
+
+        {/* <!-- Meta Tags Generated with https://metatags.io --> */}
+      </Head>
       <body className={merry.className}>{children}</body>
     </html>
   );
