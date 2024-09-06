@@ -8,6 +8,7 @@ const merry = Merriweather({ weight: '400', subsets: ["latin"] });
 export const metadata = {
   title: "Livio Reinoso - Front-End & Mobile Developer",
   description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
+  image: metadataImg,
   og: {
     type: "website",
     url: "https://www.livioreinoso.com/",
@@ -54,11 +55,11 @@ export default function RootLayout({ children }) {
         <meta property="og:image" content={metadataImg} />
 
         {/* <!-- Twitter --> */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.livioreinoso.com/" />
-        <meta property="twitter:title" content="Livio Reinoso - Front-End & Mobile Developer" />
-        <meta property="twitter:description" content="I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake." />
-        <meta property="twitter:image" content={metadataImg} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.livioreinoso.com/" />
+        <meta name="twitter:title" content="Livio Reinoso - Front-End & Mobile Developer" />
+        <meta name="twitter:description" content="I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake." />
+        <meta name="twitter:image" content={metadataImg} />
 
         {/* <!-- Meta Tags Generated with https://metatags.io --> */}
       </Head>
