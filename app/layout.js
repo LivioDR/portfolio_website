@@ -17,7 +17,7 @@ export const metadata = {
     description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
     image: metadataImg,
     images: [{
-      url: './../public/MetadataLivioPhoto.JPG',
+      url: './../MetadataLivioPhoto.JPG',
       width: 800,
       height: 600,
     }]
@@ -30,12 +30,6 @@ export const metadata = {
     description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
     image: metadataImg,
   },
-
-  ['og:type']: "website",
-  ['og:url']: "https://www.livioreinoso.com/",
-  ['og:title']: "Livio Reinoso - Front-End & Mobile Developer",
-  ['og:description']: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
-  ['og:image']: metadataImg,
 
   ['twitter:card']: "summary_large_image",
   ['twitter:url']: "https://www.livioreinoso.com/",
