@@ -40,12 +40,13 @@ const ContactScreen = ({viewport}) => {
 
     const [info, setInfo] = useState({})
     const imgSize = viewport.width * 0.35
+    const title = "Let's talk!"
 
     if(viewport.format == 'portrait'){
         return(
             <div style={styles.contactWrapper} id="contact">
                 <h1 style={styles.title}>
-                Let's talk!
+                {title}
                 </h1>
                 <div style={styles.container}>
                     <InputField type={'name'} setInfo={setInfo}/>
@@ -59,7 +60,7 @@ const ContactScreen = ({viewport}) => {
         return(
             <div style={styles.contactWrapper} id="contact">
                 <h1 style={styles.title}>
-                Let's talk!
+                {title}
                 </h1>
                 <div style={{...styles.container, ...styles.landscapeContainer}}>
                     <div style={{...styles.imgHolder, borderRadius: `${imgSize*0.3}px`}}>
