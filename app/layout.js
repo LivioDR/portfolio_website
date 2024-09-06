@@ -19,15 +19,7 @@ export const metadata = {
       width: 800,
       height: 600,
     }]
-    },
-  
-  twitter: {
-    card: 'summary_large_image',
-    url: 'https://www.livioreinoso.com/',
-    title: "Livio Reinoso - Front-End & Mobile Developer",
-    description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
-    image: './../MetadataLivioPhoto.jpg',
-  }
+    }
 };
 
 export default function RootLayout({ children }) {
