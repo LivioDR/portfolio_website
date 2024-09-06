@@ -73,7 +73,7 @@ const ContactScreen = ({viewport}) => {
                 <div style={{...styles.container, ...styles.landscapeContainer}}>
                     <div style={{...styles.imgHolder, borderRadius: `${imgSize*0.3}px`}}>
                         <Image
-                            className="float"
+                            className="floating"
                             src={laptopImage}
                             width={imgSize}
                             height={imgSize}

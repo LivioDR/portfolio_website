@@ -14,6 +14,7 @@ const HeaderStyle = {
         background: 'var(--dark-gradient)',
         borderBottom: '2px var(--main-color) solid',
         position: 'fixed',
+        zIndex: 1,
     },
     portraitContainer: {
         flexDirection: 'column',
