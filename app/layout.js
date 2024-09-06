@@ -1,7 +1,7 @@
 import { Merriweather } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
-import metadataImg from './../public/MetadataLivioPhoto.JPG'
+import metadataImg from './MetadataLivioPhoto.JPG'
 
 const merry = Merriweather({ weight: '400', subsets: ["latin"] });
 
@@ -17,7 +17,7 @@ export const metadata = {
     description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
     image: metadataImg,
     images: [{
-      url: './../MetadataLivioPhoto.JPG',
+      url: './MetadataLivioPhoto.JPG',
       width: 800,
       height: 600,
     }]
