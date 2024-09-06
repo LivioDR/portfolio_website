@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import InputField from "./InputField/InputField";
 import laptopImage from '../../../public/assets/icons/laptop.png'
+import CTAButton from "../HomeScreen/CTAButton";
 
 const styles = {
     contactWrapper: {
@@ -60,6 +61,7 @@ const ContactScreen = ({viewport}) => {
                     <InputField type={'name'} setInfo={setInfo}/>
                     <InputField type={'email'} setInfo={setInfo}/>
                     <InputField type={'message'} setInfo={setInfo}/>
+                    <CTAButton text="Send" styleToUse={'portrait'}/>
                 </div>
             </div>
         )
@@ -84,6 +86,7 @@ const ContactScreen = ({viewport}) => {
                         <InputField type={'name'} setInfo={setInfo}/>
                         <InputField type={'email'} setInfo={setInfo}/>
                         <InputField type={'message'} setInfo={setInfo}/>
+                        <CTAButton text="Send" styleToUse={'portrait'}/>
                     </div>
                 </div>
             </div>

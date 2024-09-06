@@ -16,6 +16,8 @@ const styles = {
     },
     textarea: {
         height: '10em',
+        resize: 'none',
+        overflowY: 'scroll',
     }
 }
 
