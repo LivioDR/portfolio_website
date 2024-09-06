@@ -8,7 +8,7 @@ const styles = {
 
 const Title = () => {
     return(
-        <h1 style={styles}>Front-End & Mobile Developer</h1>
+        <h2 style={styles}>Front-End & Mobile Developer</h2>
     )
 }
 export default Title

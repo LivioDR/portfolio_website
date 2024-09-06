@@ -4,8 +4,9 @@ import "./globals.css";
 const merry = Merriweather({ weight: '400', subsets: ["latin"] });
 
 export const metadata = {
-  title: "Livio Reinoso - Front-End & Mobile Developer",
+  title: "Livio Reinoso - Front-End and Mobile Developer",
   description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
+  keywords: 'website, developer, progressive web apps, react, react native, firebase, database, authentication, github, docker, dockerized, bootstrap',
   image: './../MetadataLivioPhoto.jpg',
   openGraph: {
     type: "website",

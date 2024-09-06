@@ -74,9 +74,9 @@ const ContactScreen = ({viewport}) => {
     if(viewport.format == 'portrait'){
         return(
             <div style={styles.contactWrapper} id="contact">
-                <h1 style={styles.title}>
+                <h2 style={styles.title}>
                 {title}
-                </h1>
+                </h2>
                 <div style={{...styles.container, ...styles.portraitFormHolder}}>
                     <InputField type={'name'} setInfo={setInfo} receivedValue={info.name}/>
                     <InputField type={'email'} setInfo={setInfo} receivedValue={info.email}/>
@@ -90,9 +90,9 @@ const ContactScreen = ({viewport}) => {
     else{
         return(
             <div style={styles.contactWrapper} id="contact">
-                <h1 style={styles.title}>
+                <h2 style={styles.title}>
                 {title}
-                </h1>
+                </h2>
                 <div style={{...styles.container, ...styles.landscapeContainer}}>
                     <div style={{...styles.imgHolder, borderRadius: `${imgSize*0.3}px`}}>
                         <Image

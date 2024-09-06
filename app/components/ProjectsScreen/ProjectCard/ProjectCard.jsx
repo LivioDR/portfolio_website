@@ -54,7 +54,7 @@ const ProjectsCard = ({info}) => {
 
     return(
         <div style={cardStyles.container}>
-            <h1 style={cardStyles.name}>{info.name}</h1>
+            <h3 style={cardStyles.name}>{info.name}</h3>
             <div style={cardStyles.imgContainer}>
                 <Image
                 src={info.img}

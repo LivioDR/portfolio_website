@@ -14,6 +14,7 @@ const styles = {
     title: {
         margin: '150px 0px 75px 0px',
         textAlign: 'center',
+        fontSize: '2.5em',
     },
     carouselContainer: {
         display: 'flex',
@@ -29,7 +30,7 @@ const ProjectsScreen = () => {
 
     return(
         <div style={styles.container} id="projects">
-            <h1 style={styles.title}>Projects</h1>
+            <h2 style={styles.title}>Projects</h2>
             <div style={styles.carouselContainer}>
                 {projectsInfo.map(projInfo =><ProjectsCard key={projInfo.name} info={projInfo}/>)}
             </div>
