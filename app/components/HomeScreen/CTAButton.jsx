@@ -26,7 +26,8 @@ const formStyles = {
 }
 
 const anchorStyle = {
-    color: 'var(--white)'
+    color: 'var(--white)',
+    padding: '10px 20px',
 }
 
 const CTAButton = ({text = "Let's talk", functionToCall, hrefValue, styleToUse}) => {
@@ -43,6 +44,12 @@ const CTAButton = ({text = "Let's talk", functionToCall, hrefValue, styleToUse})
                 styleToUse == 'portrait' && 
                 <button className={merry.className} style={portraitStyles} onClick={functionToCall}>
                     <a style={anchorStyle} href={hrefValue}>{text}</a>
+                </button>
+            }
+            {
+                styleToUse == 'card' && 
+                <button className={merry.className} style={portraitStyles} onClick={functionToCall}>
+                    <a style={anchorStyle} href={hrefValue} target="_blank" rel="noreferrer">{text}</a>
                 </button>
             }
             {

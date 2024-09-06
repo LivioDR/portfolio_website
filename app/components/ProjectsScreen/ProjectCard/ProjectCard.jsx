@@ -46,12 +46,6 @@ const cardStyles = {
 
 const ProjectsCard = ({info}) => {
 
-    const visitWebsite = () => {
-        if(window){
-            window.open(info.link,'_blank')
-        }
-    }
-
     return(
         <div style={cardStyles.container}>
             <h3 style={cardStyles.name}>{info.name}</h3>
@@ -71,7 +65,7 @@ const ProjectsCard = ({info}) => {
                 {info.features.map(badgeName =><Badges key={badgeName+info.name} name={badgeName}/>)}
             </div>
             <div style={cardStyles.btnContainer}>
-                <CTAButton text="Visit" styleToUse={'portrait'} functionToCall={()=>{visitWebsite()}} />
+                <CTAButton text="Visit" styleToUse={'card'} hrefValue={info.link} />
             </div>
         </div>
     )
