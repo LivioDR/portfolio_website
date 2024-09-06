@@ -8,6 +8,22 @@ const merry = Merriweather({ weight: '400', subsets: ["latin"] });
 export const metadata = {
   title: "Livio Reinoso - Front-End & Mobile Developer",
   description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
+  og: {
+    type: "website",
+    url: "https://www.livioreinoso.com/",
+    title: "Livio Reinoso - Front-End & Mobile Developer",
+    description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
+    image: metadataImg,
+  },
+  
+  twitter: {
+    card: 'summary_large_image',
+    url: 'https://www.livioreinoso.com/',
+    title: "Livio Reinoso - Front-End & Mobile Developer",
+    description: "I am a Front-End and Mobile Developer and Biomedical Engineer, based in London, Ontario. My commitment to staying at the forefront of technological advancements drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.",
+    image: metadataImg,
+  },
+
   ['og:type']: "website",
   ['og:url']: "https://www.livioreinoso.com/",
   ['og:title']: "Livio Reinoso - Front-End & Mobile Developer",
