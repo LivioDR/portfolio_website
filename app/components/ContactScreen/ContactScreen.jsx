@@ -62,7 +62,6 @@ const ContactScreen = ({viewport}) => {
 
     const onSendClicked = async(event) => {
         event.preventDefault()
-        console.log(info)
         const validation = validateFields(info)
         setAlert(validation[1])
         if(validation[0]){
