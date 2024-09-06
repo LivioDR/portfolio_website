@@ -15,12 +15,12 @@ const styles = {
     anchors: {
         textAlign: 'center',
         fontSize: '0.8em',
-        margin: '5px 0 0 0',
+        margin: '10px 0 20px 0',
         color: 'rgba(200, 200, 200, 0.7)',
     },
     text: {
         textAlign: 'center',
-        margin: '10px auto 20px auto',
+        margin: '20px auto 10px auto',
         color: 'var(--light-main)',
 
     }
@@ -29,6 +29,9 @@ const styles = {
 const Footer = () => {
     return(
         <div style={styles.container}>
+            <p style={styles.text}>
+                &copy; 2024 Livio Reinoso. All rights reserved.
+            </p>
             <div style={styles.disclaimer}>
                 <a
                 style={styles.anchors}
@@ -37,9 +40,6 @@ const Footer = () => {
                 style={styles.anchors}
                 href="https://svgl.app/">Badge icons by svgl</a>
             </div>
-            <p style={styles.text}>
-                &copy; 2024 Livio Reinoso. All rights reserved.
-            </p>
         </div>
     )
 }

@@ -14,7 +14,7 @@ const styles = {
         margin: '75px 0px',
     },
     title: {
-        margin: '200px 0px 75px 0px',
+        margin: '150px 0px 75px 0px',
         color: 'var(--main-color)',
         textAlign: 'center',
         fontSize: '2.5em',
@@ -117,6 +117,3 @@ const ContactScreen = ({viewport}) => {
     }
 }
 export default ContactScreen
-
-
-// <a href="https://www.freepik.com/free-vector/antigravity-technology-with-elements_4082399.htm#fromView=keyword&page=1&position=10&uuid=3d48b832-96d2-43bf-80ad-1be32d095911">Image by freepik</a>

@@ -6,10 +6,10 @@ import '../../globals.css'
 const styles = {
     container: {
         width: '100%',
-        padding: '5% 0%',
+        padding: '0% 0%',
         color: 'var(--light-main)',
         background: 'var(--dark-gradient)',
-        marginBottom: '75px',
+        paddingBottom: '150px',
     },
     title: {
         margin: '150px 0px 75px 0px',
