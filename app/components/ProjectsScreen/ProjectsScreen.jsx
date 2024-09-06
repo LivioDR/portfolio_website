@@ -1,16 +1,17 @@
 import React from "react";
 import ProjectsCard from "./ProjectCard/ProjectCard";
 import projectsInfo from "@/app/utilities/projectsInfo";
+import '../../globals.css'
 
 const styles = {
     container: {
         width: '100%',
         padding: '5% 0%',
-        backgroundColor: 'var(--main-color)',
         color: 'var(--light-main)',
+        background: 'var(--dark-gradient)',
     },
     title: {
-        margin: '75px 0px',
+        margin: '150px 0px 75px 0px',
         textAlign: 'center',
     },
     carouselContainer: {
@@ -26,7 +27,7 @@ const styles = {
 const ProjectsScreen = () => {
 
     return(
-        <div style={styles.container}>
+        <div style={styles.container} id="projects">
             <h1 style={styles.title}>Projects</h1>
             <div style={styles.carouselContainer}>
                 {projectsInfo.map(projInfo =><ProjectsCard key={projInfo.name} info={projInfo}/>)}

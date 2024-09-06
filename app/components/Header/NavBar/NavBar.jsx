@@ -35,18 +35,18 @@ const NavBar = ({format}) => {
     if(format == 'landscape'){
         return(
             <ul style={{...NavBarStyles.container, ...NavBarStyles.landscapeContainer}}>
-                <li>About Me</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         )
     }
     else{
         return(
             <ul style={{...NavBarStyles.container, ...NavBarStyles.portraitContainer}}>
-                <li style={NavBarStyles.portraitItems}>About Me</li>
-                <li style={NavBarStyles.portraitItems}>Projects</li>
-                <li style={NavBarStyles.portraitItems}>Contact</li>
+                <li style={NavBarStyles.portraitItems}><a className="dark-font" href="#about-me">About Me</a></li>
+                <li style={NavBarStyles.portraitItems}><a className="dark-font" href="#projects">Projects</a></li>
+                <li style={NavBarStyles.portraitItems}><a className="dark-font" href="#contact">Contact</a></li>
             </ul>
         )
     }

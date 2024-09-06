@@ -1,9 +1,12 @@
 :root {
-  --main-color: #231942;
+  --main-color: #18112C;
   --middle-color: #4281A4;
   --light-main: #D4C2FC;
   --important: #F25F5C;
-  --white: #FFEBC6;
+  --white: #FDC05D;
+  --dark-gradient: linear-gradient(-45deg, #0c0135, #1c0037, #060012, #0a032a);
+  --light-gradient: linear-gradient(-90deg, var(--light-main) 13%, #e8ddff 72%);
+
 
 }
 * {
@@ -19,4 +22,27 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100dvh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+a {
+  color: var(--light-main);
+  text-decoration: none;
+}
+.light-font {
+  color: var(--light-main)
+}
+.dark-font {
+  color: var(--main-color);
 }

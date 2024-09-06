@@ -10,8 +10,9 @@ const HeaderStyle = {
         alignItems: 'center',
         width: '100%',
         height: '150px',
-        backgroundColor: 'var(--main-color)',
+        background: 'var(--dark-gradient)',
         borderBottom: '2px var(--main-color) solid',
+        position: 'fixed',
     },
     portraitContainer: {
         flexDirection: 'column',
