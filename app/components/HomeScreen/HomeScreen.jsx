@@ -52,7 +52,7 @@ const HomeScreen = ({viewport}) => {
                 <div style={{...styles.column, width: '100%', paddingBottom: '20%', paddingTop: '20%', gap: '50px'}}>
                     <Title/>
                     <BodyText text={bodyText}/>
-                    <CTAButton styleToUse={viewport.format}/>
+                    <CTAButton styleToUse={viewport.format} hrefValue={'#contact'}/>
                 </div>
             }
             {
@@ -61,7 +61,7 @@ const HomeScreen = ({viewport}) => {
                     <div style={styles.column}>
                         <Title/>
                         <BodyText text={bodyText}/>
-                        <CTAButton styleToUse={viewport.format}/>
+                        <CTAButton styleToUse={viewport.format} hrefValue={'#contact'}/>
                     </div>
                     <div style={{...styles.column, ...styles.column2}}>
                         <BodyImage viewportSize={viewport}/>

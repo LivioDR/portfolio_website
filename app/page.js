@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import HomeScreen from "./components/HomeScreen/HomeScreen";
 import ProjectsScreen from "./components/ProjectsScreen/ProjectsScreen";
 import './globals.css'
+import ContactScreen from "./components/ContactScreen/ContactScreen";
 
 export default function Home() {
 
@@ -35,6 +36,7 @@ export default function Home() {
         <Header format={viewport?.format}/>
         <HomeScreen viewport={viewport}/>
         <ProjectsScreen/>
+        <ContactScreen viewport={viewport}/>
       </>
     );
   }

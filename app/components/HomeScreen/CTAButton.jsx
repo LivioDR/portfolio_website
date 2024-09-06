@@ -19,20 +19,24 @@ const portraitStyles = {
     width: '50%',
 }
 
-const CTAButton = ({text = "Let's talk", functionToCall, styleToUse}) => {
+const anchorStyle = {
+    color: 'var(--white)'
+}
+
+const CTAButton = ({text = "Let's talk", functionToCall, hrefValue, styleToUse}) => {
 
     return(
             <>
             {
                 styleToUse == 'landscape' && 
                 <button className={merry.className} style={landscapeStyles} onClick={functionToCall}>
-                    {text}
+                    <a style={anchorStyle} href={hrefValue}>{text}</a>
                 </button>
             }
             {
                 styleToUse == 'portrait' && 
                 <button className={merry.className} style={portraitStyles} onClick={functionToCall}>
-                    {text}
+                    <a style={anchorStyle} href={hrefValue}>{text}</a>
                 </button>
             }
             </>

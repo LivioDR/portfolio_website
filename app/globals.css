@@ -36,6 +36,22 @@ body {
   }
 }
 
+@keyframes float {
+	0% {
+		transform: translatey(10%);
+	}
+	50% {
+		transform: translatey(0%);
+	}
+	100% {
+		transform: translatey(10%);
+	}
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
 a {
   color: var(--light-main);
   text-decoration: none;
