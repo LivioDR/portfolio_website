@@ -5,10 +5,10 @@ const merry = Merriweather({ weight: '400', subsets: ["latin"] });
 
 const styles = {
     input: {
-        width: '90%',
+        width: '80%',
         height: '2.5em',
         borderRadius: '10px',
-        margin: '2% 5%',
+        margin: '2% auto',
         padding: '2%',
         backgroundColor: 'var(--main-color)',
         color: 'var(--light-main)',

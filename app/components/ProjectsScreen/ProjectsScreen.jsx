@@ -9,6 +9,7 @@ const styles = {
         padding: '5% 0%',
         color: 'var(--light-main)',
         background: 'var(--dark-gradient)',
+        marginBottom: '75px',
     },
     title: {
         margin: '150px 0px 75px 0px',

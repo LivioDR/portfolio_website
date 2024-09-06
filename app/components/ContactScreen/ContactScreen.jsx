@@ -33,6 +33,14 @@ const styles = {
     },
     formHolder: {
         width: '50%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    portraitFormHolder: {
+        display: 'flex',
+        flexDirection: 'column',
     }
 }
 
@@ -48,7 +56,7 @@ const ContactScreen = ({viewport}) => {
                 <h1 style={styles.title}>
                 {title}
                 </h1>
-                <div style={styles.container}>
+                <div style={{...styles.container, ...styles.portraitFormHolder}}>
                     <InputField type={'name'} setInfo={setInfo}/>
                     <InputField type={'email'} setInfo={setInfo}/>
                     <InputField type={'message'} setInfo={setInfo}/>
