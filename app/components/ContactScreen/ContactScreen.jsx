@@ -12,7 +12,7 @@ const styles = {
         margin: '75px 0px',
     },
     title: {
-        margin: '150px 0px',
+        margin: '200px 0px 75px 0px',
         color: 'var(--main-color)',
         textAlign: 'center',
         fontSize: '2.5em',
