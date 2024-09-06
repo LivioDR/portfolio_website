@@ -21,7 +21,7 @@ const styles = {
     }
 }
 
-const InputField = ({type, setInfo}) => {
+const InputField = ({type, setInfo, receivedValue}) => {
     
     const changeData = () => {
         setInfo(prev => {
@@ -29,7 +29,6 @@ const InputField = ({type, setInfo}) => {
                 ...prev,
                 [type]: document.getElementById(type).value
             }
-            console.log(data)
             return data
         })
     }
@@ -38,6 +37,7 @@ const InputField = ({type, setInfo}) => {
             <input className={merry.className} id={type} onInput={()=>{changeData()}}
             style={styles.input} 
             type={type} 
+            value={receivedValue}
             placeholder={`Enter your ${type}`}>
             </input>
         )
@@ -47,6 +47,7 @@ const InputField = ({type, setInfo}) => {
             <textarea className={merry.className} id={type} onInput={()=>{changeData()}}
             style={{...styles.input, ...styles.textarea}} 
             type={type} 
+            value={receivedValue}
             placeholder={`Enter your ${type}`}>
             </textarea>
         )

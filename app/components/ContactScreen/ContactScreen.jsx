@@ -4,6 +4,7 @@ import Image from "next/image";
 import InputField from "./InputField/InputField";
 import laptopImage from '../../../public/assets/icons/laptop.png'
 import CTAButton from "../HomeScreen/CTAButton";
+import { sendEmail, validateFields } from "@/app/services/emailService";
 
 const styles = {
     contactWrapper: {
@@ -26,7 +27,7 @@ const styles = {
     },
     imgHolder: {
         width: '40%',
-        margin: 'auto 5%',
+        margin: '0% 5%',
         padding: '0% 5% 0% 0%',
         display: 'grid',
         placeItems: 'center',
@@ -42,14 +43,35 @@ const styles = {
     portraitFormHolder: {
         display: 'flex',
         flexDirection: 'column',
-    }
+    },
+    alertLabel: {
+        color: 'var(--important)',
+        textShadow: '1px 1px var(--main-color)',
+        fontSize: '1.2em',
+        margin: '10px',
+        textAlign: 'center',
+    },
 }
 
 const ContactScreen = ({viewport}) => {
 
-    const [info, setInfo] = useState({})
+    const [info, setInfo] = useState({name: '', email: '', message: ''})
+    const [alert, setAlert] = useState('')
     const imgSize = viewport.width * 0.35
     const title = "Let's talk!"
+
+    const onSendClicked = async(event) => {
+        event.preventDefault()
+        console.log(info)
+        const validation = validateFields(info)
+        setAlert(validation[1])
+        if(validation[0]){
+            // send email and set success message
+            const sentEmail = await sendEmail(info)
+            setAlert(sentEmail[1])
+            setInfo({name: '', email: '', message: ''})
+        }
+    }
 
     if(viewport.format == 'portrait'){
         return(
@@ -58,10 +80,11 @@ const ContactScreen = ({viewport}) => {
                 {title}
                 </h1>
                 <div style={{...styles.container, ...styles.portraitFormHolder}}>
-                    <InputField type={'name'} setInfo={setInfo}/>
-                    <InputField type={'email'} setInfo={setInfo}/>
-                    <InputField type={'message'} setInfo={setInfo}/>
-                    <CTAButton text="Send" styleToUse={'portrait'}/>
+                    <InputField type={'name'} setInfo={setInfo} receivedValue={info.name}/>
+                    <InputField type={'email'} setInfo={setInfo} receivedValue={info.email}/>
+                    <InputField type={'message'} setInfo={setInfo} receivedValue={info.message}/>
+                    <CTAButton text="Send" styleToUse={'form'} functionToCall={onSendClicked}/>
+                    <p style={styles.alertLabel}>{alert}</p>
                 </div>
             </div>
         )
@@ -83,10 +106,11 @@ const ContactScreen = ({viewport}) => {
                             />
                     </div>
                     <div style={styles.formHolder}>
-                        <InputField type={'name'} setInfo={setInfo}/>
-                        <InputField type={'email'} setInfo={setInfo}/>
-                        <InputField type={'message'} setInfo={setInfo}/>
-                        <CTAButton text="Send" styleToUse={'portrait'}/>
+                        <InputField type={'name'} setInfo={setInfo} receivedValue={info.name}/>
+                        <InputField type={'email'} setInfo={setInfo} receivedValue={info.email}/>
+                        <InputField type={'message'} setInfo={setInfo} receivedValue={info.message}/>
+                        <CTAButton text="Send" styleToUse={'form'} functionToCall={onSendClicked}/>
+                        <p style={styles.alertLabel}>{alert}</p>
                     </div>
                 </div>
             </div>
