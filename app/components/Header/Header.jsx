@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar/NavBar";
+import BadgeIcons from "../ProjectsScreen/Badges/BadgeIcons";
 
 
 const HeaderStyle = {
@@ -36,7 +37,14 @@ const HeaderStyle = {
     titlePortrait: {
         color: 'var(--light-main)',
         marginLeft: 0,
-        fontSize: '2em',
+        fontSize: '1.5em',
+    },
+    titleWrapper: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        width: '100%',
     }
 }
 
@@ -47,9 +55,13 @@ const Header = ({format}) => {
     if(isPortrait){
         return(
             <div style={{...HeaderStyle.container, ...HeaderStyle.portraitContainer}}>
+                <div style={HeaderStyle.titleWrapper}>
                 <h1 style={HeaderStyle.titlePortrait}>
                     Livio Reinoso
                 </h1>
+                <a href="https://www.linkedin.com/in/liviodr/" target="_blank"><BadgeIcons name={'LinkedIn'}/></a>
+                <a href="https://github.com/LivioDR/" target="_blank"><BadgeIcons name={'GitHubTitle'}/></a>
+                </div>
                 {
                     isPortrait &&
                     <NavBar format={format} />
@@ -65,7 +77,11 @@ const Header = ({format}) => {
         return(
             <div style={HeaderStyle.container}>
                 <h1 style={HeaderStyle.title}>
-                    Livio Reinoso
+                    Livio Reinoso 
+                    <div style={{width: '40%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center'}}>
+                        <a href="https://www.linkedin.com/in/liviodr/" target="_blank"><BadgeIcons name={'LinkedIn'}/></a>
+                        <a href="https://github.com/LivioDR/" target="_blank"><BadgeIcons name={'GitHubTitle'}/></a>
+                    </div>
                 </h1>
                 <NavBar format={format}/>
             </div>
