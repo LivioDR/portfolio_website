@@ -64,7 +64,7 @@ const projects = [
     },
     {
         name: 'Portfolio site',
-        desc: 'My own portfolio website created to display my projects and allow people who wants to connect to reach out easily. The website was created with Next.js, with a backend API hooked to MailSender to send messages to my inbox.',
+        desc: 'My own portfolio website created to display my projects and allow people who wants to connect to reach out easily. The website was created with Next.js, with a backend API hooked to MailerSend to send messages to my inbox.',
         link: 'https://livioreinoso.com',
         img: `${imgPath}/portfolio.png`,
         imgAlt: 'Screenshot of this website',

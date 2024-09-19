@@ -16,7 +16,7 @@ On top of that, I’ve started working as a **Software Developer** for the Canad
 
 This portfolio website is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), and hosted on [Vercel](https://vercel.com), with [CloudFlare](https://www.cloudflare.com/products/registrar/) as a DNS provider.
 
-The middleware was developed by me on **Node.js** and connected to the [MailSender](https://www.mailersend.com/) API to let your messages reach my inbox in no time.
+The middleware was developed by me on **Node.js** and connected to the [MailerSend](https://www.mailersend.com/) API to let your messages reach my inbox in no time.
 
 ---
 ### My projects
