@@ -62,5 +62,13 @@ const projects = [
         imgAlt: 'PokeBattle screenshot',
         features: ['React','expo','Firebase','GitHub','Netlify','PWA'],
     },
+    {
+        name: 'Portfolio site',
+        desc: 'My own portfolio website created to display my projects and allow people who wants to connect to reach out easily. The website was created with Next.js, with a backend API hooked to MailSender to send messages to my inbox.',
+        link: 'https://livioreinoso.com',
+        img: `${imgPath}/portfolio.png`,
+        imgAlt: 'Screenshot of this website',
+        features: ['Next', 'Node.js','GitHub','CSS','Vercel']
+    },
 ]
 export default projects
