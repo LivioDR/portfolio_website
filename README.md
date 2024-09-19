@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My name is Livio Reinoso
 
-## Getting Started
+## I'm a Front-End Developer and MSc in Bioengineering
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### About me 
+Born in **Argentina** 🇦🇷, and based in **London, Ontario** 🇨🇦, where I am further honing my skills in mobile application development through a specialized program at **Fanshawe College**. My commitment to staying at the forefront of technology drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Since 2021, I've been working as a Product Manager for Arazy Group, a Vancouver-based MedTech company, working closely with the Canadian IT team on the SaaS that the company offers to their clients, through the use of **React.js, PostgreSQL, Java, and SpringBoot**. 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+On top of that, I’ve started working as a **Software Developer** for the Canadian headquarters of this company on February 2024, earning a vast experience that pairs with what I’ve learned over my time at college, mostly on **ReactNative, Progressive Web Apps, Android (Kotlin) and iOS (Swift)** development.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
+### About this repo
 
-## Learn More
+This portfolio website is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), and hosted on [Vercel](https://vercel.com), with [CloudFlare](https://www.cloudflare.com/products/registrar/) as a DNS provider.
 
-To learn more about Next.js, take a look at the following resources:
+The middleware was developed by me on **Node.js** and connected to the [MailSender](https://www.mailersend.com/) API to let your messages reach my inbox in no time.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
+### My projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can check out all of my public and (thanks to the permission given by my clients) some of my private projects in [my website](https://livioreinoso.com).
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you're interested in working together, [just let me know](mailto:liviodr@gmail.com)!
