@@ -5,7 +5,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',
-
+        backgroundColor: "var(--main-color)",
     },
     disclaimer: {
         display: 'flex',

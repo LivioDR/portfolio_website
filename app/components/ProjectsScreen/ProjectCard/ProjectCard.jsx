@@ -8,7 +8,6 @@ const cardStyles = {
     container: {
         width: 'fit-content',
         maxWidth: '350px',
-        margin: '0% 5%',
         backgroundColor: 'var(--light-main)',
         color: 'var(--main-color)',
         padding: '2%',
@@ -25,18 +24,6 @@ const cardStyles = {
         margin: '2% auto',
         textAlign: 'left',
     },
-    imgContainer: {
-        margin: '2% auto',
-
-    },
-    badgesContainer: {
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'flex-start',
-        width: 'fit-content',
-
-    },
     btnContainer: {
         display: 'grid',
         positionItems: 'center',
@@ -47,9 +34,9 @@ const cardStyles = {
 const ProjectsCard = ({info}) => {
 
     return(
-        <div style={cardStyles.container}>
+        <div style={cardStyles.container} className="mx-4">
             <h3 style={cardStyles.name}>{info.name}</h3>
-            <div style={cardStyles.imgContainer}>
+            <div className="min-w-[275px] my-2 justify-center items-center flex">
                 <Image
                 src={info.img}
                 width={250}
@@ -58,10 +45,10 @@ const ProjectsCard = ({info}) => {
                 style={{objectFit: 'cover'}}
                 />
             </div>
-            <p style={cardStyles.desc}>
+            <p className="my-4 text-justify">
                 {info.desc}
             </p>
-            <div style={cardStyles.badgesContainer}>
+            <div className="flex flex-row flex-wrap justify-start w-min-max">
                 {info.features.map(badgeName =><Badges key={badgeName+info.name} name={badgeName}/>)}
             </div>
             <div style={cardStyles.btnContainer}>
