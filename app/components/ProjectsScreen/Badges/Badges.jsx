@@ -11,7 +11,7 @@ const badgeStyle = {
         borderRadius: '5px',
         border: '1px solid black',
         margin: '1%',
-        minHeight: '25px',
+        height: '30px',
         backgroundColor: '#f0f0f0'
     },
     badgeContainer: {
