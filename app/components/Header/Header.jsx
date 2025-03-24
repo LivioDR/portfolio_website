@@ -10,7 +10,7 @@ const HeaderStyle = {
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
-        height: '150px',
+        height: '100px',
         background: 'var(--dark-gradient)',
         borderBottom: '2px var(--main-color) solid',
         position: 'fixed',
@@ -19,6 +19,7 @@ const HeaderStyle = {
     portraitContainer: {
         flexDirection: 'column',
         justifyContent: 'space-around',
+        height: '150px',
     },
     portraitNav: {
         display: 'flex',
@@ -77,13 +78,11 @@ const Header = ({format}) => {
     else{
         return(
             <div style={HeaderStyle.container}>
-                <h1 style={HeaderStyle.title}>
-                    Livio Reinoso 
-                    <div style={{width: '40%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center'}}>
-                        <a href="https://www.linkedin.com/in/liviodr/" target="_blank"><BadgeIcons name={'LinkedIn'}/></a>
-                        <a href="https://github.com/LivioDR/" target="_blank"><BadgeIcons name={'GitHubTitle'}/></a>
-                    </div>
-                </h1>
+                <div style={HeaderStyle.title} className="flex flex-row min-w-max items-center gap-2">
+                    <h1 className="min-w-max px-4">Livio Reinoso</h1>
+                    <a href="https://www.linkedin.com/in/liviodr/" target="_blank"><BadgeIcons name={'LinkedIn'}/></a>
+                    <a href="https://github.com/LivioDR/" target="_blank"><BadgeIcons name={'GitHubTitle'}/></a>
+                </div>
                 <NavBar format={format}/>
             </div>
         )
