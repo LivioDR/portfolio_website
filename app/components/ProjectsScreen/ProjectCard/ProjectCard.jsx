@@ -46,7 +46,7 @@ const ProjectsCard = ({info}) => {
                     {info.features.map(badgeName =><Badges key={badgeName+info.name} name={badgeName}/>)}
                 </div>
                 {/* DESKTOP */}
-                <div className="w-1/3 max-h-min flex-row flex-wrap justify-start mx-auto mt-2 hidden md:flex">
+                <div className="md:flex w-1/3 max-h-min flex-row flex-wrap justify-start mx-auto mt-2 hidden">
                     {info.features.map(badgeName =><Badges key={badgeName+info.name} name={badgeName}/>)}
                 </div>
 
