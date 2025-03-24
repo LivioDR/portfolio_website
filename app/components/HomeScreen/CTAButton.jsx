@@ -55,7 +55,7 @@ const CTAButton = ({text = "Let's talk", functionToCall, hrefValue, styleToUse})
             {
                 styleToUse == 'form' && 
                 <button className={merry.className} style={formStyles} onClick={functionToCall}>
-                    <a style={anchorStyle} href={hrefValue}>{text}</a>
+                    <a style={anchorStyle} href={hrefValue} target="_blank" rel="noreferrer">{text}</a>
                 </button>
             }
             </>
