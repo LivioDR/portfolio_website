@@ -1,39 +1,30 @@
 import React from "react";
 import ProjectsCard from "./ProjectCard/ProjectCard";
 import projectsInfo from "@/app/utilities/projectsInfo";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import '../../globals.css'
 
 const styles = {
     container: {
-        width: '100%',
-        padding: '0% 0%',
         color: 'var(--light-main)',
         background: 'var(--dark-gradient)',
-        paddingBottom: '150px',
-    },
-    title: {
-        margin: '150px 0px 75px 0px',
-        textAlign: 'center',
-        fontSize: '2.5em',
-    },
-    carouselContainer: {
-        display: 'flex',
-        flexDirection: 'row',
-        width: '100%',
-        overflowX: 'scroll',
-        margin: '3% auto',
-        height: '100%',
     }
 }
 
 const ProjectsScreen = () => {
 
     return(
-        <div style={styles.container} id="projects">
-            <h2 style={styles.title}>Projects</h2>
-            <div style={styles.carouselContainer}>
-                {projectsInfo.map(projInfo =><ProjectsCard key={projInfo.name} info={projInfo}/>)}
-            </div>
+        <div style={styles.container} id="projects" className="w-full p-0 pb-[150px]">
+            <h2 className="mt-[150px] mb-[75px] text-4xl text-center">Projects</h2>
+            <Carousel>
+                <CarouselContent className="mx-auto">
+                    {projectsInfo.map(projInfo =>
+                        <CarouselItem key={projInfo.name} className="p-0">
+                            <ProjectsCard info={projInfo}/>
+                        </CarouselItem>
+                    )}
+                </CarouselContent>
+            </Carousel>
         </div>
     )
 }
