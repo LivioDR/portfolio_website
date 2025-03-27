@@ -58,6 +58,22 @@ body {
   min-height: 100dvh;
 }
 
+.bg-light {
+  background-color: var(--light-main);
+}
+.bg-main {
+  background-color: var(--main-color);
+}
+.bg-gradient-dark {
+  background-color: var(--dark-gradient);
+}
+.bg-gradient-light {
+  background-color: var(--light-gradient);
+}
+.bg-accent {
+  background-color: var(--white);
+}
+
 @keyframes gradient {
   0% {
     background-position: 0 50%;
