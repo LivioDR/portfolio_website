@@ -76,7 +76,7 @@ const HomeScreen = ({viewport}) => {
                 </>
             }
         </div>
-        <Spacer flipped={true} darkens={true}/>
+        <Spacer flipped={false} darkens={true}/>
         </>
     )
 }
