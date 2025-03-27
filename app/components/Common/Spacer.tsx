@@ -7,15 +7,15 @@ export const Spacer = ({flipped, darkens}: { flipped:boolean, darkens:boolean })
             className={cn("h-16 w-full", flipped ? "" : "rotate-180")}
             style={darkens ? {
                 background: `linear-gradient(
-                    #18112C,
-                    #D4C2FC
+                   var(--main-color),
+                    var(--light-main)
                 )`,
             }
             : 
             {
                 background: `linear-gradient(
-                    #D4C2FC,
-                    #18112C
+                    var(--light-main),
+                    var(--main-color)
                 )`,
             }}
             />
