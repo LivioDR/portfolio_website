@@ -6,8 +6,9 @@ import BodyText from "./BodyText";
 import CTAButton from "./CTAButton";
 import BodyImage from "./BodyImage";
 
-const bodyText = `Based in London, Ontario 🇨🇦. I am further honing my skills in mobile application development through a specialized program at Fanshawe College. My commitment to staying at the forefront of technology drives my passion for delivering innovative solutions and exceeding expectations in every project I undertake. If you're interested in working together, just let me know!`
+const EXPERIENCE_YEARS = Number(new Date().getFullYear()) - 2020
 
+const bodyText = `I'm a Front-End Developer and AI Software Engineer based in London, Ontario 🇨🇦 specializing in scalable web applications, AI chatbot development, and SaaS platforms. With over ${EXPERIENCE_YEARS} years of experience, I build cutting-edge, AI-enhanced digital solutions that streamline business operations and enhance user experiences.`
 const styles = {
     identifier: {
         height: '150px',
