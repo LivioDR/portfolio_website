@@ -8,6 +8,7 @@ import ProjectsScreen from "./components/ProjectsScreen/ProjectsScreen";
 import './globals.css'
 import ContactScreen from "./components/ContactScreen/ContactScreen";
 import Footer from "./components/Footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
 
@@ -39,6 +40,11 @@ export default function Home() {
         <ProjectsScreen/>
         <ContactScreen viewport={viewport}/>
         <Footer/>
+        <ToastContainer position="bottom-right" 
+        toastStyle={{
+          backgroundColor: 'var(--main-color)', 
+          color: 'var(--white)', 
+        }}/>
       </>
     );
   }

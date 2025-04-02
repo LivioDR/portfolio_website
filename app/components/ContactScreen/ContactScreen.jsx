@@ -7,23 +7,30 @@ import CTAButton from "../HomeScreen/CTAButton";
 import { sendEmail, validateFields } from "@/app/services/emailService";
 import { CTAStyles } from "@/lib/constants";
 import { Spacer } from "../Common/Spacer";
+import { toast } from "react-toastify";
 
 const ContactScreen = () => {
 
     const [info, setInfo] = useState({name: '', email: '', message: ''})
-    const [alert, setAlert] = useState('')
     const title = "Let's talk!"
     const imgSize = 700
 
     const onSendClicked = async(event) => {
         event.preventDefault()
         const validation = validateFields(info)
-        setAlert(validation[1])
         if(validation[0]){
             // send email and set success message
             const sentEmail = await sendEmail(info)
-            setAlert(sentEmail[1])
+            if(sentEmail[0]){
+                toast.success(sentEmail[1])
+            }
+            else {
+                toast.error(sentEmail[1])
+            }
             setInfo({name: '', email: '', message: ''})
+        }
+        else {
+            toast.error(validation[1])
         }
     }
 
@@ -51,12 +58,6 @@ const ContactScreen = () => {
                     <InputField type={'email'} setInfo={setInfo} receivedValue={info.email}/>
                     <InputField type={'message'} setInfo={setInfo} receivedValue={info.message}/>
                     <CTAButton text="Send" styleToUse={CTAStyles.FORM} functionToCall={onSendClicked}/>
-                    <p 
-                    className="important-font text-lg text-center m-[10px]" 
-                    style={{textShadow: '1px 1px var(--main-color)'}}
-                    >
-                        {alert}
-                    </p>
                 </div>
             </div>
         </Element>
