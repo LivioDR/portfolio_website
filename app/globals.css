@@ -112,6 +112,9 @@ a {
 .dark-font {
   color: var(--main-color);
 }
+.important-font {
+  color: var(--important);
+}
 
 .dark {
   --background: oklch(0.145 0 0);
