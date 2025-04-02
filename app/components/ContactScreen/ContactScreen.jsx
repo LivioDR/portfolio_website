@@ -7,59 +7,12 @@ import { sendEmail, validateFields } from "@/app/services/emailService";
 import { CTAStyles } from "@/lib/constants";
 import { Spacer } from "../Common/Spacer";
 
-const styles = {
-    contactWrapper: {
-        background: 'var(--light-main)'
-    },
-    container: {
-        margin: '75px 0px',
-    },
-    title: {
-        margin: '150px 0px 75px 0px',
-        color: 'var(--main-color)',
-        textAlign: 'center',
-        fontSize: '2.5em',
-    },
-    landscapeContainer: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        width: '100%',
-    },
-    imgHolder: {
-        width: '40%',
-        margin: '0% 5%',
-        padding: '0% 5% 0% 0%',
-        display: 'grid',
-        placeItems: 'center',
-        backgroundColor: 'var(--main-color)',
-    },
-    formHolder: {
-        width: '50%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    portraitFormHolder: {
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    alertLabel: {
-        color: 'var(--important)',
-        textShadow: '1px 1px var(--main-color)',
-        fontSize: '1.2em',
-        margin: '10px',
-        textAlign: 'center',
-    },
-}
-
-const ContactScreen = ({viewport}) => {
+const ContactScreen = () => {
 
     const [info, setInfo] = useState({name: '', email: '', message: ''})
     const [alert, setAlert] = useState('')
-    const imgSize = viewport.width * 0.35
     const title = "Let's talk!"
+    const imgSize = 700
 
     const onSendClicked = async(event) => {
         event.preventDefault()
@@ -74,33 +27,15 @@ const ContactScreen = ({viewport}) => {
     }
 
     return(
-        <>
         <div 
-        className="block md:hidden relative"
-        style={styles.contactWrapper} 
+        className="relative bg-light" 
         id="contact">
             <Spacer flipped darkens />
-            <h2 style={styles.title}>
+            <h2 className="mx-0 mt-[150px] mb-[75px] dark-font text-4xl text-center">
             {title}
             </h2>
-            <div style={{...styles.container, ...styles.portraitFormHolder}}>
-                <InputField type={'name'} setInfo={setInfo} receivedValue={info.name}/>
-                <InputField type={'email'} setInfo={setInfo} receivedValue={info.email}/>
-                <InputField type={'message'} setInfo={setInfo} receivedValue={info.message}/>
-                <CTAButton text="Send" styleToUse={CTAStyles.FORM} functionToCall={onSendClicked}/>
-                <p style={styles.alertLabel}>{alert}</p>
-            </div>
-        </div>
-        <div 
-        className="hidden md:block relative"
-        style={styles.contactWrapper} 
-        id="contact">
-            <Spacer flipped darkens />
-            <h2 style={styles.title}>
-            {title}
-            </h2>
-            <div style={{...styles.container, ...styles.landscapeContainer}}>
-                <div style={{...styles.imgHolder, borderRadius: `${imgSize*0.3}px`}}>
+            <div className="my-[75px] mx-0 flex flex-row justify-around w-full">
+                <div className="hidden md:grid w-2/5 my-0 mx-auto pr-[5%] place-items-center bg-main rounded-3xl">
                     <Image
                         className="floating"
                         src={'/assets/icons/laptop.png'}
@@ -109,16 +44,20 @@ const ContactScreen = ({viewport}) => {
                         alt="Laptop image"
                         />
                 </div>
-                <div style={styles.formHolder}>
+                <div className="my-0 md:mb-[75px] mx-0 flex flex-col w-full md:w-1/2 md:justify-start justify-center md:items-center">
                     <InputField type={'name'} setInfo={setInfo} receivedValue={info.name}/>
                     <InputField type={'email'} setInfo={setInfo} receivedValue={info.email}/>
                     <InputField type={'message'} setInfo={setInfo} receivedValue={info.message}/>
                     <CTAButton text="Send" styleToUse={CTAStyles.FORM} functionToCall={onSendClicked}/>
-                    <p style={styles.alertLabel}>{alert}</p>
+                    <p 
+                    className="important-font text-lg text-center m-[10px]" 
+                    style={{textShadow: '1px 1px var(--main-color)'}}
+                    >
+                        {alert}
+                    </p>
                 </div>
             </div>
         </div>
-        </>
     )
 }
 export default ContactScreen
