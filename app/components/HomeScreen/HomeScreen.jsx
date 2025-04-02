@@ -49,7 +49,7 @@ const HomeScreen = () => {
                 )}
                 <CTAButton styleToUse={CTAStyles.LANDSCAPE} hrefValue={'#contact'}/>
             </div>
-            <div style={{...styles.column}} className="md:flex hidden w-2/5">
+            <div style={{...styles.column}} className="md:flex hidden mx-auto w-2/5 max-w-[500px]">
                 <BodyImage/>
             </div>
             
