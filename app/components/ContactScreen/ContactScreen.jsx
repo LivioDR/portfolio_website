@@ -4,6 +4,8 @@ import Image from "next/image";
 import InputField from "./InputField/InputField";
 import CTAButton from "../HomeScreen/CTAButton";
 import { sendEmail, validateFields } from "@/app/services/emailService";
+import { CTAStyles } from "@/lib/constants";
+import { Spacer } from "../Common/Spacer";
 
 const styles = {
     contactWrapper: {
@@ -71,48 +73,52 @@ const ContactScreen = ({viewport}) => {
         }
     }
 
-    if(viewport.format == 'portrait'){
-        return(
-            <div style={styles.contactWrapper} id="contact">
-                <h2 style={styles.title}>
-                {title}
-                </h2>
-                <div style={{...styles.container, ...styles.portraitFormHolder}}>
+    return(
+        <>
+        <div 
+        className="block md:hidden relative"
+        style={styles.contactWrapper} 
+        id="contact">
+            <Spacer flipped darkens />
+            <h2 style={styles.title}>
+            {title}
+            </h2>
+            <div style={{...styles.container, ...styles.portraitFormHolder}}>
+                <InputField type={'name'} setInfo={setInfo} receivedValue={info.name}/>
+                <InputField type={'email'} setInfo={setInfo} receivedValue={info.email}/>
+                <InputField type={'message'} setInfo={setInfo} receivedValue={info.message}/>
+                <CTAButton text="Send" styleToUse={CTAStyles.FORM} functionToCall={onSendClicked}/>
+                <p style={styles.alertLabel}>{alert}</p>
+            </div>
+        </div>
+        <div 
+        className="hidden md:block relative"
+        style={styles.contactWrapper} 
+        id="contact">
+            <Spacer flipped darkens />
+            <h2 style={styles.title}>
+            {title}
+            </h2>
+            <div style={{...styles.container, ...styles.landscapeContainer}}>
+                <div style={{...styles.imgHolder, borderRadius: `${imgSize*0.3}px`}}>
+                    <Image
+                        className="floating"
+                        src={'/assets/icons/laptop.png'}
+                        width={imgSize}
+                        height={imgSize}
+                        alt="Laptop image"
+                        />
+                </div>
+                <div style={styles.formHolder}>
                     <InputField type={'name'} setInfo={setInfo} receivedValue={info.name}/>
                     <InputField type={'email'} setInfo={setInfo} receivedValue={info.email}/>
                     <InputField type={'message'} setInfo={setInfo} receivedValue={info.message}/>
-                    <CTAButton text="Send" styleToUse={'form'} functionToCall={onSendClicked}/>
+                    <CTAButton text="Send" styleToUse={CTAStyles.FORM} functionToCall={onSendClicked}/>
                     <p style={styles.alertLabel}>{alert}</p>
                 </div>
             </div>
-        )
-    }
-    else{
-        return(
-            <div style={styles.contactWrapper} id="contact">
-                <h2 style={styles.title}>
-                {title}
-                </h2>
-                <div style={{...styles.container, ...styles.landscapeContainer}}>
-                    <div style={{...styles.imgHolder, borderRadius: `${imgSize*0.3}px`}}>
-                        <Image
-                            className="floating"
-                            src={'/assets/icons/laptop.png'}
-                            width={imgSize}
-                            height={imgSize}
-                            alt="Laptop image"
-                            />
-                    </div>
-                    <div style={styles.formHolder}>
-                        <InputField type={'name'} setInfo={setInfo} receivedValue={info.name}/>
-                        <InputField type={'email'} setInfo={setInfo} receivedValue={info.email}/>
-                        <InputField type={'message'} setInfo={setInfo} receivedValue={info.message}/>
-                        <CTAButton text="Send" styleToUse={'form'} functionToCall={onSendClicked}/>
-                        <p style={styles.alertLabel}>{alert}</p>
-                    </div>
-                </div>
-            </div>
-        )
-    }
+        </div>
+        </>
+    )
 }
 export default ContactScreen
