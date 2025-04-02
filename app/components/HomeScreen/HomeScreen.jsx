@@ -4,6 +4,7 @@ import CTAButton from "./CTAButton";
 import BodyImage from "./BodyImage";
 import { Spacer } from "../Common/Spacer";
 import { cn } from "@/lib/utils";
+import { CTAStyles } from "@/lib/constants";
 
 const EXPERIENCE_YEARS = Number(new Date().getFullYear()) - 2020
 
@@ -17,7 +18,7 @@ const styles = {
     }
 }
 
-const HomeScreen = ({viewport}) => {
+const HomeScreen = () => {
 
     return(
         <>
@@ -34,7 +35,7 @@ const HomeScreen = ({viewport}) => {
                 { bodyTexts.map((text, index) => 
                     <BodyText key={index} text={text}/>
                 )}
-                <CTAButton styleToUse={viewport.format} hrefValue={'#contact'}/>
+                <CTAButton styleToUse={CTAStyles.PORTRAIT} hrefValue={'#contact'}/>
             </div>
 
             {/* DESKTOP DISPLAY */}
@@ -46,10 +47,10 @@ const HomeScreen = ({viewport}) => {
                 { bodyTexts.map((text, index) => 
                     <BodyText key={index} text={text}/>
                 )}
-                <CTAButton styleToUse={viewport.format} hrefValue={'#contact'}/>
+                <CTAButton styleToUse={CTAStyles.LANDSCAPE} hrefValue={'#contact'}/>
             </div>
             <div style={{...styles.column}} className="md:flex hidden w-2/5">
-                <BodyImage viewportSize={viewport}/>
+                <BodyImage/>
             </div>
             
             <Spacer flipped={false} darkens={true}/>
