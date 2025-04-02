@@ -5,7 +5,6 @@ import BadgeIcons from "../ProjectsScreen/Badges/BadgeIcons";
 
 const HeaderStyle = {
     container: {
-        display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -52,40 +51,32 @@ const HeaderStyle = {
 
 const Header = ({format}) => {
 
-    const isPortrait = format === 'portrait' ? true : false
-
-    if(isPortrait){
-        return(
-            <div style={{...HeaderStyle.container, ...HeaderStyle.portraitContainer}}>
-                <div style={HeaderStyle.titleWrapper}>
-                <h1 style={HeaderStyle.titlePortrait}>
-                    Livio Reinoso
-                </h1>
+    return(
+        <>
+        <div
+        className="md:hidden flex"
+        style={{...HeaderStyle.container, ...HeaderStyle.portraitContainer}}
+        >
+            <div style={HeaderStyle.titleWrapper}>
+            <h1 style={HeaderStyle.titlePortrait}>
+                Livio Reinoso
+            </h1>
+            <a href="https://www.linkedin.com/in/liviodr/" target="_blank"><BadgeIcons name={'LinkedIn'}/></a>
+            <a href="https://github.com/LivioDR/" target="_blank"><BadgeIcons name={'GitHubTitle'}/></a>
+            </div>
+            <NavBar/>
+        </div>
+        <div 
+        className="hidden md:flex"
+        style={HeaderStyle.container}>
+            <div style={HeaderStyle.title} className="flex flex-row min-w-max items-center gap-2">
+                <h1 className="min-w-max px-4">Livio Reinoso</h1>
                 <a href="https://www.linkedin.com/in/liviodr/" target="_blank"><BadgeIcons name={'LinkedIn'}/></a>
                 <a href="https://github.com/LivioDR/" target="_blank"><BadgeIcons name={'GitHubTitle'}/></a>
-                </div>
-                {
-                    isPortrait &&
-                    <NavBar format={format} />
-                }
-                {
-                    !isPortrait &&
-                    <NavBar format={format}/>
-                }
             </div>
-        )    
+            <NavBar/>
+        </div>
+        </>
+    )
     }
-    else{
-        return(
-            <div style={HeaderStyle.container}>
-                <div style={HeaderStyle.title} className="flex flex-row min-w-max items-center gap-2">
-                    <h1 className="min-w-max px-4">Livio Reinoso</h1>
-                    <a href="https://www.linkedin.com/in/liviodr/" target="_blank"><BadgeIcons name={'LinkedIn'}/></a>
-                    <a href="https://github.com/LivioDR/" target="_blank"><BadgeIcons name={'GitHubTitle'}/></a>
-                </div>
-                <NavBar format={format}/>
-            </div>
-        )
-    }
-}
 export default Header
