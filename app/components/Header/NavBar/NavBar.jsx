@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-scroll'
+
 const NavBarStyles = {
     container: {
         color: 'var(--light-main)',
@@ -35,16 +37,16 @@ const NavBar = () => {
         <ul 
         className="md:flex hidden"
         style={{...NavBarStyles.container}}>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="about-me" smooth={true} duration={500}>About Me</Link></li>
+            <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
+            <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
         </ul>
         <ul
         className="flex md:hidden"
         style={{...NavBarStyles.container, ...NavBarStyles.portraitContainer}}>
-            <li style={NavBarStyles.portraitItems}><a className="dark-font" href="#about-me">About Me</a></li>
-            <li style={NavBarStyles.portraitItems}><a className="dark-font" href="#projects">Projects</a></li>
-            <li style={NavBarStyles.portraitItems}><a className="dark-font" href="#contact">Contact</a></li>
+            <li style={NavBarStyles.portraitItems}><Link className="dark-font" to="about-me" smooth={true} duration={500}>About Me</Link></li>
+            <li style={NavBarStyles.portraitItems}><Link className="dark-font" to="projects" smooth={true} duration={500}>Projects</Link></li>
+            <li style={NavBarStyles.portraitItems}><Link className="dark-font" to="contact" smooth={true} duration={500}>Contact</Link></li>
         </ul>
         </>
     )

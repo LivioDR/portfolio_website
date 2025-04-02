@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from "react";
+import { Element } from 'react-scroll'
 import Image from "next/image";
 import InputField from "./InputField/InputField";
 import CTAButton from "../HomeScreen/CTAButton";
@@ -27,9 +28,9 @@ const ContactScreen = () => {
     }
 
     return(
-        <div 
+        <Element 
         className="relative bg-light" 
-        id="contact">
+        name="contact">
             <Spacer flipped darkens/>
             <Spacer darkens/>
             <h2 className="mx-0 mt-[150px] mb-[75px] dark-font text-4xl text-center">
@@ -58,7 +59,7 @@ const ContactScreen = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </Element>
     )
 }
 export default ContactScreen

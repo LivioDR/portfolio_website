@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect, useCallback, useRef } from "react";
+import { Element } from 'react-scroll'
 import Autoplay from "embla-carousel-autoplay"
 import ProjectsCard from "./ProjectCard/ProjectCard";
 import projectsInfo from "@/app/utilities/projectsInfo";
@@ -41,8 +42,7 @@ const ProjectsScreen = () => {
     )
 
     return(
-        <>
-        <div style={styles.container} id="projects" className="w-full p-0 pb-[150px]">
+        <Element style={styles.container} name="projects" className="w-full p-0 pb-[150px]">
             
             <h2 className="mt-[150px] mb-[50px] md:mb-[75px] text-4xl text-center">Projects</h2>
             
@@ -74,8 +74,7 @@ const ProjectsScreen = () => {
                 />
             ))}
             </div>
-        </div>
-        </>
+        </Element>
     )
 }
 export default ProjectsScreen

@@ -1,3 +1,4 @@
+import { Element } from 'react-scroll'
 import Title from "./Title";
 import BodyText from "./BodyText";
 import CTAButton from "./CTAButton";
@@ -22,8 +23,8 @@ const HomeScreen = () => {
 
     return(
         <>
-        <div className="min-h-[150px] w-full bg-light" id="about-me">
-        </div>
+        <Element className="min-h-[150px] w-full bg-light" name="about-me">
+        </Element>
         <div className="relative flex flex-row w-full d min-h-[80vh] bg-light">
 
             {/* MOBILE DISPLAY */}
