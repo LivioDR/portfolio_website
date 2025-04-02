@@ -35,7 +35,7 @@ export default function Home() {
       <>
         <SpeedInsights/>
         <Header format={viewport?.format}/>
-        <HomeScreen viewport={viewport}/>
+        <HomeScreen/>
         <ProjectsScreen/>
         <ContactScreen viewport={viewport}/>
         <Footer/>
