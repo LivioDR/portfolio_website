@@ -30,7 +30,8 @@ const ContactScreen = () => {
         <div 
         className="relative bg-light" 
         id="contact">
-            <Spacer flipped darkens />
+            <Spacer flipped darkens/>
+            <Spacer darkens/>
             <h2 className="mx-0 mt-[150px] mb-[75px] dark-font text-4xl text-center">
             {title}
             </h2>
