@@ -8,7 +8,7 @@ const styles = {
         width: '80%',
         height: '2.5em',
         borderRadius: '10px',
-        margin: '2% auto',
+        margin: '0% auto 4% auto',
         padding: '2%',
         backgroundColor: 'var(--main-color)',
         color: 'var(--light-main)',

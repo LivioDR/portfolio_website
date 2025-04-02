@@ -58,6 +58,22 @@ body {
   min-height: 100dvh;
 }
 
+.bg-light {
+  background-color: var(--light-main);
+}
+.bg-main {
+  background-color: var(--main-color);
+}
+.bg-gradient-dark {
+  background-color: var(--dark-gradient);
+}
+.bg-gradient-light {
+  background-color: var(--light-gradient);
+}
+.bg-accent {
+  background-color: var(--white);
+}
+
 @keyframes gradient {
   0% {
     background-position: 0 50%;
@@ -87,7 +103,6 @@ body {
 }
 
 a {
-  color: var(--light-main);
   text-decoration: none;
 }
 .light-font {
@@ -95,6 +110,9 @@ a {
 }
 .dark-font {
   color: var(--main-color);
+}
+.important-font {
+  color: var(--important);
 }
 
 .dark {
