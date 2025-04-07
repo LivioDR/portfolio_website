@@ -8,7 +8,7 @@ const styles = {
 
 const Title = () => {
     return(
-        <h2 style={styles}>AI-Powered Front-End Developer</h2>
+        <h2 style={styles}>AI-Powered Front-End Developer <span className="wave hidden md:inline">👋</span></h2>
     )
 }
 export default Title
