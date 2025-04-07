@@ -7,12 +7,20 @@ const imgPath = '/assets/projects'
 
 const projects = [
     {
+        name: 'Kainotera | Soluciones de IA',
+        desc: 'Website for a B2B company that provides AI-powered solutions. The website was created with Next.js, with a backend API hooked to MailerSend to send messages to the business inbox.',
+        link: 'https://kainotera.com.ar',
+        img: `${imgPath}/kainotera.png`,
+        imgAlt: 'Kainotera website screenshot',
+        features: ['Next','Typescript','Node.js','Tailwind','GitHub','Vercel'],
+    },
+    {
         name: 'TermoArgenta RPG',
         desc: 'Full-stack Next.js RPG game with an AI-powered DM, custom APIs, deployed on Vercel, with analytics enabled on SpeedInsights, authentication and cloud saving on Firebase, containerized on Docker.',
         link: 'https://termoargentarpg.vercel.app/',
         img: `${imgPath}/termoargenta.png`,
         imgAlt: 'TermoArgenta screenshot',
-        features: ['Next','Node.js','Firebase','Docker','Vercel','GitHub'],
+        features: ['Next','Node.js','Firebase','Docker','GitHub','Gemini'],
     },
     {
         name: 'DolarApp',
@@ -22,6 +30,7 @@ const projects = [
         imgAlt: 'Dolar App logo',
         features: ['PWA','Next','Netlify','GitHub','CSS'],
     },
+    /*
     {
         name: "Who's that poke?",
         desc: 'Responsive mobile-first "Guess the pokemon" game created on React.js and build as a Progressive Web Application with Firebase authentication and data storage to save the progress for each player.',
@@ -54,6 +63,7 @@ const projects = [
         imgAlt: 'NookBook screenshot',
         features: ['Figma'],
     },
+    */
     {
         name: 'PokeBattle RPG',
         desc: 'An idle RPG based on the retro Pokemon games from Gameboy Color, coded on React Native for mobile and Next for desktop, as a progressive web app. The player progress is stored in Firebase on a shared database between both apps.',
@@ -68,7 +78,7 @@ const projects = [
         link: 'https://livioreinoso.com',
         img: `${imgPath}/portfolio.png`,
         imgAlt: 'Screenshot of this website',
-        features: ['Next', 'Node.js','GitHub','CSS','Vercel']
+        features: ['Next', 'Node.js','Tailwind','GitHub','Vercel','CloudFlare']
     },
 ]
 export default projects
