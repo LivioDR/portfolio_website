@@ -105,6 +105,15 @@ body {
 a {
   text-decoration: none;
 }
+
+nav > ul > li {
+  cursor: pointer;
+}
+
+nav > ul > li:hover {
+  color: var(--white);
+}
+
 .light-font {
   color: var(--light-main)
 }
