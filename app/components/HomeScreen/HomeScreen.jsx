@@ -1,3 +1,4 @@
+'use client'
 import { Element } from 'react-scroll'
 import Title from "./Title";
 import BodyText from "./BodyText";

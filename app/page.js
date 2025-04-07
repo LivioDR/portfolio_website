@@ -1,6 +1,3 @@
-'use client'
-import { useState, useEffect } from "react";
-import { ProgressBar } from "react-loader-spinner";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from "./components/Header/Header";
 import HomeScreen from "./components/HomeScreen/HomeScreen";
@@ -12,61 +9,20 @@ import { ToastContainer } from "react-toastify";
 
 export default function Home() {
 
-  const [viewport, setViewport] = useState({width: 500, height: 1000,format: undefined})
+  return (
+    <>
+      <SpeedInsights/>
+      <Header/>
+      <HomeScreen/>
+      <ProjectsScreen/>
+      <ContactScreen/>
+      <Footer/>
+      <ToastContainer position="bottom-right" 
+      toastStyle={{
+        backgroundColor: 'var(--main-color)', 
+        color: 'var(--white)', 
+      }}/>
+    </>
+  );
 
-  const updateViewportDimensions = () => {
-    setViewport({
-      width: window.innerWidth,
-      height: window.innerHeight,
-      format: window.innerHeight < window.innerWidth ? 'landscape' : 'portrait'
-    })
-  }
-
-  useEffect(()=>{
-    if(window){
-      updateViewportDimensions()
-      const listenerId = window.addEventListener('resize',updateViewportDimensions)
-      return window.removeEventListener('resize', listenerId)
-    }
-  },[])
-
-
-  if(viewport?.format){
-    return (
-      <>
-        <SpeedInsights/>
-        <Header format={viewport?.format}/>
-        <HomeScreen/>
-        <ProjectsScreen/>
-        <ContactScreen viewport={viewport}/>
-        <Footer/>
-        <ToastContainer position="bottom-right" 
-        toastStyle={{
-          backgroundColor: 'var(--main-color)', 
-          color: 'var(--white)', 
-        }}/>
-      </>
-    );
-  }
-  else
-  {
-    return(
-      <div style={{
-        width: '100%',
-        height: '100vh',
-        backgroundColor: 'var(--light-main)',
-        display: 'grid',
-        placeItems: 'center',
-      }}>
-      <ProgressBar
-        barColor='var(--main-color)'
-        borderColor='var(--main-color)'
-        visible={true}
-        ariaLabel="progress-bar-loading"
-        width={200}
-        height={200}
-      />
-      </div>
-    )
-  }
 }

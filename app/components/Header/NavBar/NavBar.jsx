@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { Link } from 'react-scroll'
 
@@ -6,15 +7,11 @@ const NavBarStyles = {
         color: 'var(--light-main)',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        width: '35%',
+        width: '100%',
         listStyleType: 'none',
         fontSize: '1.2em',
     },
-    landscapeContainer: {
-
-    },
     portraitContainer: {
-        flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
@@ -33,7 +30,7 @@ const NavBarStyles = {
 const NavBar = () => {
 
     return(
-        <>
+        <nav className="flex flex-row justify-center gap-4 items-center w-full md:w-1/3">
         <ul 
         className="md:flex hidden"
         style={{...NavBarStyles.container}}>
@@ -48,7 +45,7 @@ const NavBar = () => {
             <li style={NavBarStyles.portraitItems}><Link className="dark-font" to="projects" smooth={true} duration={500}>Projects</Link></li>
             <li style={NavBarStyles.portraitItems}><Link className="dark-font" to="contact" smooth={true} duration={500}>Contact</Link></li>
         </ul>
-        </>
+        </nav>
     )
 }
 

@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import NavBar from "./NavBar/NavBar";
 import BadgeIcons from "../ProjectsScreen/Badges/BadgeIcons";
@@ -49,7 +50,7 @@ const HeaderStyle = {
     }
 }
 
-const Header = ({format}) => {
+const Header = () => {
 
     return(
         <>
