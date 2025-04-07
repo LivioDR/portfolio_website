@@ -24,6 +24,7 @@ const badgeStyle = {
     },
     text: {
         marginInline: '10px',
+        fontSize: '12px',
         color: '#0a0a0a',
     },
 }
