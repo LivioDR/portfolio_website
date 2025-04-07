@@ -33,10 +33,10 @@ const ProjectsCard = ({info}) => {
                         width={250}
                         height={125}
                         alt={info.imgAlt}
-                        className="aspect-video w-10/12"
+                        className="aspect-video w-full rounded md:w-11/12"
                         />
                     </div>
-                    <p className="my-2 px-2 w-10/12 mx-auto text-justify block">
+                    <p className="my-2 px-2 w-full md:w-11/12 mx-auto text-justify block">
                         {info.desc}
                     </p>
                 </div>
