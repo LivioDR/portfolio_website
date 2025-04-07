@@ -64,7 +64,7 @@ const ProjectsScreen = () => {
             </Carousel>
 
             {/* Carousel Controllers */}
-            <div style={styles.container} className="flex justify-center gap-2 mt-8">
+            <div style={styles.container} className="flex justify-center gap-2 mt-8 max-w-min mx-auto">
             {projectsInfo.map((_, index) => (
                 <button
                 key={index}
