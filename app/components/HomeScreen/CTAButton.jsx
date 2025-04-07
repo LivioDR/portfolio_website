@@ -1,5 +1,6 @@
 import React from "react";
 import { Merriweather } from "next/font/google";
+import { Link } from 'react-scroll'
 
 const merry = Merriweather({ weight: '400', subsets: ["latin"] });
 
@@ -31,6 +32,35 @@ const anchorStyle = {
 }
 
 const CTAButton = ({text = "Let's talk", functionToCall, hrefValue, styleToUse}) => {
+
+    if(hrefValue == "#contact"){
+        return(
+            <>
+            {
+                styleToUse == 'landscape' && 
+                <button className={merry.className} style={landscapeStyles} onClick={functionToCall}>
+                    <Link 
+                    to="contact" 
+                    smooth={true} 
+                    duration={500}
+                    className="cursor-pointer"
+                    >{text}</Link>
+                </button>
+            }
+            {
+                styleToUse == 'portrait' && 
+                <button className={merry.className} style={portraitStyles} onClick={functionToCall}>
+                    <Link 
+                    to="contact" 
+                    smooth={true} 
+                    duration={500}
+                    className="cursor-pointer"
+                    >{text}</Link>
+                </button>
+            }
+            </>
+        )
+    }
 
     return(
             <>
