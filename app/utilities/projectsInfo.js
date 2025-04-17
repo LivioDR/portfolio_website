@@ -23,6 +23,14 @@ const projects = [
         features: ['Next','Node.js','Firebase','Docker','GitHub','Gemini'],
     },
     {
+        name: 'YWCA Delaware',
+        desc: 'Assisted YWCA Delaware with updating and enhancing their Squarespace website by implementing new content, graphics, and style customizations to improve layout consistency and user experience.',
+        link: 'https://www.ywcade.org/',
+        img: `${imgPath}/ywcade.png`,
+        imgAlt: 'YWCA Delaware website screenshot',
+        features: ['HTML', 'CSS', 'Squarespace'],
+    },
+    {
         name: 'DolarApp',
         desc: 'Progressive Web Application developed in Next.js that displays all the different FX quotes for USD, CAD and AUS to ARS conversion based on client requirements. All data is retrieved from the CriptoYA Dollar API.',
         link: 'https://dolarapp.netlify.app/',
