@@ -17,7 +17,8 @@ const projects = [
     {
         name: 'TermoArgenta RPG',
         desc: 'Full-stack Next.js RPG game with an AI-powered DM, custom APIs, deployed on Vercel, with analytics enabled on SpeedInsights, authentication and cloud saving on Firebase, containerized on Docker.',
-        link: 'https://termoargentarpg.vercel.app/',
+        // link: 'https://termoargentarpg.vercel.app/',
+        link: 'https://rpg.livioreinoso.com/',
         img: `${imgPath}/termoargenta.png`,
         imgAlt: 'TermoArgenta screenshot',
         features: ['Next','Node.js','Firebase','Docker','GitHub','Gemini'],
@@ -33,7 +34,8 @@ const projects = [
     {
         name: 'DolarApp',
         desc: 'Progressive Web Application developed in Next.js that displays all the different FX quotes for USD, CAD and AUS to ARS conversion based on client requirements. All data is retrieved from the CriptoYA Dollar API.',
-        link: 'https://dolarapp.netlify.app/',
+        // link: 'https://dolarapp.netlify.app/',
+        link: 'https://dolar.livioreinoso.com/',
         img: `${imgPath}/dolarapp.png`,
         imgAlt: 'Dolar App logo',
         features: ['PWA','Next','Netlify','GitHub','CSS'],
