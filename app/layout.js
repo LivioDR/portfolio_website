@@ -1,4 +1,5 @@
 import { Merriweather } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 
 const merry = Merriweather({ weight: '400', subsets: ["latin"] });
@@ -11,8 +12,8 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: "https://www.livioreinoso.com/",
-    title: "Livio Reinoso - AI-Powered Front-End Developer | React.js & Next.js Expert in London, ON",
-    siteName: 'Livio Reinoso - AI-Powered Front-End Developer | React.js & Next.js Expert in London, ON',
+    title: "Livio Reinoso | AI-Powered Front-End Developer | React.js & Next.js Expert in London, ON",
+    siteName: 'Livio Reinoso | AI-Powered Front-End Developer | React.js & Next.js Expert in London, ON',
     description: "Expert Front-End Developer in London, Ontario, specializing in AI-powered web applications, React.js, Next.js, and SaaS development. I help businesses integrate AI-driven solutions for automation, chatbots, and scalable software. Let's build the future of web applications together!",
     image: './../MetadataLivioPhoto.jpg',
     images: [{
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={merry.className}>{children}</body>
+      <Analytics/>
     </html>
   );
 }
