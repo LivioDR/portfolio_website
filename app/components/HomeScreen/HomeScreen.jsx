@@ -8,9 +8,9 @@ import { Spacer } from "../Common/Spacer";
 import { cn } from "@/lib/utils";
 import { CTAStyles } from "@/lib/constants";
 
-const EXPERIENCE_YEARS = Number(new Date().getFullYear()) - 2020
+// const EXPERIENCE_YEARS = Number(new Date().getFullYear()) - 2020
 
-const bodyTexts = [`I'm a Front-End Developer and AI Software Engineer based in London, Ontario 🇨🇦 specializing in scalable web applications, AI chatbot development, and SaaS platforms. With over ${EXPERIENCE_YEARS} years of experience, I build cutting-edge, AI-enhanced digital solutions that streamline business operations and enhance user experiences.`]
+const bodyTexts = [`I'm a Senior Front-End Developer and AI Software Engineer based in London, Ontario 🇨🇦 with a background in building fast, accessible, and scalable digital solutions.`, `I specialize in React, TypeScript, and modern JavaScript frameworks, alongside AI chatbot development and SaaS platforms that streamline business operations and enhance user experiences.`, `Whether crafting intuitive user interfaces from Figma designs, building cutting-edge, accessible, and scalable AI-enhanced digital solutions, or customizing CMS platforms, I bring a user-centered, performance-focused mindset to every project.`]
 
 const styles = {
     column: {
@@ -31,7 +31,7 @@ const HomeScreen = () => {
             {/* MOBILE DISPLAY */}
             <div 
             className={cn("md:hidden flex")}
-            style={{...styles.column, width: '100%', paddingBottom: '20%', paddingTop: '20%', gap: '50px'}}
+            style={{...styles.column, width: '100%', paddingBottom: '20%', paddingTop: '20%', gap: '12px'}}
             >
                 <Title/>
                 { bodyTexts.map((text, index) => 
