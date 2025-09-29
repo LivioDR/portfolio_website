@@ -15,6 +15,14 @@ const projects = [
         features: ['Next','Typescript','Node.js','Tailwind','GitHub','Vercel'],
     },
     {
+        name: 'Riopaila | Sistema de Monitoreo de Cultivos',
+        desc: 'Interactive web app for monitoring and managing crop performance. It allows users to visualize fields on a satellite map with color-coded indicators, check historical data, generate CSV/PDF reports, and manage users and activity logs.',
+        link: 'https://riopaila-prototipo.vercel.app/',
+        img: `${imgPath}/riopaila.png`,
+        imgAlt: 'Sistema de Monitoreo de Cultivos - Riopaila',
+        features: ['Next','Typescript','Leaflet','Tailwind','Node.js','Clerk', 'GitHub', 'Vercel'],
+    },
+    {
         name: 'TermoArgenta RPG',
         desc: 'Full-stack Next.js RPG game with an AI-powered DM, custom APIs, deployed on Vercel, with analytics enabled on SpeedInsights, authentication and cloud saving on Firebase, containerized on Docker.',
         // link: 'https://termoargentarpg.vercel.app/',
@@ -65,6 +73,7 @@ const projects = [
         imgAlt: 'LivioShop screenshot',
         features: ['React','Firebase','Bootstrap','GitHub','Netlify'],
     },
+    */
     {
         name: 'NookBook',
         desc: 'Animal Crossing New Horizons companion-app protoype designed on Figma based on gathered and analyzed user data as a UI/UX case study. The project covered the whole design cycle including user personas, user flows, wireframes, functional prototypes and user testing.',
@@ -73,7 +82,7 @@ const projects = [
         imgAlt: 'NookBook screenshot',
         features: ['Figma'],
     },
-    */
+    /*
     {
         name: 'PokeBattle RPG',
         desc: 'An idle RPG based on the retro Pokemon games from Gameboy Color, coded on React Native for mobile and Next for desktop, as a progressive web app. The player progress is stored in Firebase on a shared database between both apps.',
@@ -82,6 +91,7 @@ const projects = [
         imgAlt: 'PokeBattle screenshot',
         features: ['React','expo','Firebase','GitHub','Netlify','PWA'],
     },
+    */
     {
         name: 'Portfolio site',
         desc: 'My own portfolio website created to display my projects and allow people who wants to connect to reach out easily. The website was created with Next.js, with a backend API hooked to MailerSend to send messages to my inbox.',
