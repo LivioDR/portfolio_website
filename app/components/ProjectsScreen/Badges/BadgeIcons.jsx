@@ -18,6 +18,10 @@ const BadgeIcons = (props) => {
             return(<Image src={'/assets/icons/nextjs.png'} className="bg-white rounded p-[1px]" style={{backgroundColor: 'white'}} width={20} height={20} alt="Next.js icon" />)
         case 'Gemini':
             return(<Image src={'/assets/icons/gemini.png'} width={20} height={20} alt="Google Gemini icon" />)
+        case 'Leaflet':
+            return(<Image src={'/assets/icons/leaflet.png'} width={20} height={20} alt="Leaflet.Js icon" />)
+            case 'Clerk':
+            return(<Image src={'/assets/icons/clerk.png'} width={20} height={20} className="py-1 rounded bg-white" alt="Clerk icon" />)
         case 'Vercel':
             return(<svg viewBox="0 0 256 222" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" {...props}><path fill="#fff" d="m128 0 128 221.705H0z" /></svg>)
         case 'Netlify':
