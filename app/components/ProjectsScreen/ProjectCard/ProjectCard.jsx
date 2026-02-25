@@ -1,66 +1,56 @@
 import React from "react";
 import Image from "next/image";
-import Badges from "../Badges/Badges";
-import CTAButton from "../../HomeScreen/CTAButton";
-import { CTAStyles } from "@/lib/constants";
-
-
-const cardStyles = {
-    container: {
-        width: 'fit-content',
-        backgroundColor: 'var(--light-main)',
-        color: 'var(--main-color)',
-    },
-    btnContainer: {
-        positionItems: 'center',
-    },
-}
-
+import { ExternalLink } from "lucide-react";
 
 const ProjectsCard = ({info}) => {
-
     return(
-        <div style={cardStyles.container} className="flex flex-col min-w-[330px] max-w-min md:max-w-screen-md md:w-10/12 h-[600px] md:h-[550px] justify-between rounded-lg py-4 px-2 mx-auto">
-
-            <h3 className="text-center text-xl my-2">{info.name}</h3>
-
-            <div className="md:flex md:flex-row md:w-full md:min-w-[650px] md:mx-auto">
-
-                <div className="mx-auto md:w-2/3">
-                    <div className="min-w-[275px] md:w-full mx-auto justify-center items-center flex">
-                        <Image
+        <a
+            href={info.link}
+            target="_blank"
+            rel="noreferrer"
+            className="group block h-full"
+        >
+            <article className="card-hover flex flex-col h-full bg-card border border-border rounded-xl overflow-hidden">
+                {/* Image */}
+                <div className="relative overflow-hidden aspect-video">
+                    <Image
                         src={info.img}
-                        width={250}
-                        height={125}
+                        width={600}
+                        height={340}
                         alt={info.imgAlt}
-                        className="aspect-video w-full rounded md:w-11/12"
-                        />
+                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-background/0 group-hover:bg-background/10 transition-colors duration-300" />
+                    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-background/80 backdrop-blur-sm text-foreground text-xs rounded-md">
+                            Visit <ExternalLink size={12} />
+                        </span>
                     </div>
-                    <p className="my-2 px-2 w-full md:w-11/12 mx-auto text-justify block">
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-col flex-1 p-5">
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                        {info.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-4">
                         {info.desc}
                     </p>
+
+                    {/* Tech badges */}
+                    <div className="flex flex-wrap gap-1.5 mt-auto">
+                        {info.features.map(feature => (
+                            <span
+                                key={feature + info.name}
+                                className="px-2 py-1 text-xs font-mono text-primary/80 bg-primary/5 border border-primary/10 rounded"
+                            >
+                                {feature}
+                            </span>
+                        ))}
+                    </div>
                 </div>
-
-                {/* BADGES */}
-
-                {/* MOBILE */}
-                <div className="flex flex-row flex-wrap justify-start w-min-max md:hidden">
-                    {info.features.map(badgeName =><Badges key={badgeName+info.name} name={badgeName}/>)}
-                </div>
-
-                {/* DESKTOP */}
-                <div className="md:flex w-1/3 max-h-min flex-row flex-wrap justify-start mx-auto mt-2 hidden">
-                    {info.features.map(badgeName =><Badges key={badgeName+info.name} name={badgeName}/>)}
-                </div>
-
-            </div>
-            <div style={cardStyles.btnContainer} className="md:hidden grid">
-                <CTAButton text="Visit" styleToUse={CTAStyles.CARD} hrefValue={info.link} />
-            </div>
-            <div style={cardStyles.btnContainer} className="hidden md:grid">
-                <CTAButton text="Visit" styleToUse={CTAStyles.FORM} hrefValue={info.link} />
-            </div>
-        </div>
+            </article>
+        </a>
     )
 }
 export default ProjectsCard
