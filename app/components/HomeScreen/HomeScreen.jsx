@@ -74,6 +74,7 @@ const HomeScreen = () => {
                                     src={"/LivioPhoto.jpg"}
                                     alt="Modern developer workspace with ambient lighting and code on dual monitors"
                                     fill
+                                    unoptimized
                                     priority
                                     className="object-cover object-top"
                                     sizes="(max-width: 768px) 0vw, (max-width: 1024px) 50vw, 33vw"
