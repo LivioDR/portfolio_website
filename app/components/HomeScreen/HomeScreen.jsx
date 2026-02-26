@@ -5,7 +5,7 @@ import { ArrowDown } from 'lucide-react'
 import Image from 'next/image'
 
 const skills = [
-    'React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js',
+    'React.js', 'Next.js', 'Vite', 'TypeScript', 'Tailwind CSS', 'Node.js',
     'AI Integration', 'Firebase', 'Docker', 'Figma', 'Vercel'
 ]
 
@@ -72,7 +72,7 @@ const HomeScreen = () => {
                             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl mt-12">
                                 <Image
                                     src={"/LivioPhoto.jpg"}
-                                    alt="Modern developer workspace with ambient lighting and code on dual monitors"
+                                    alt="Livio David Reinoso picture"
                                     fill
                                     unoptimized
                                     priority
