@@ -71,7 +71,7 @@ const HomeScreen = () => {
                         <div className="hidden md:block md:w-1/3 lg:w-1/3 shrink-0 opacity-0 animate-fade-in-up animate-delay-300">
                             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl mt-12">
                                 <Image
-                                    src={"/LivioPhoto.jpg"}
+                                    src={"/LivioPhoto.JPG"}
                                     alt="Livio David Reinoso picture"
                                     fill
                                     unoptimized
