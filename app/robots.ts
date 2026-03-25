@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/private/'],
       },
     ],
-    sitemap: 'https://yourdomain.com/sitemap.xml',
+    sitemap: 'https://livioreinoso.com/sitemap.xml',
   }
 }

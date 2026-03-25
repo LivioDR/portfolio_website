@@ -5,18 +5,8 @@ import Autoplay from "embla-carousel-autoplay"
 import ProjectsCard from "./ProjectCard/ProjectCard";
 import projectsInfo from "@/app/utilities/projectsInfo";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { cn } from "@/lib/utils"
-import '../../globals.css'
-
-const styles = {
-    container: {
-        color: 'var(--light-main)',
-        background: 'var(--dark-gradient)',
-    }
-}
 
 const ProjectsScreen = () => {
-
     const plugin = useRef(
         Autoplay({ delay: 5000, stopOnInteraction: true })
     )
@@ -25,55 +15,62 @@ const ProjectsScreen = () => {
     const [current, setCurrent] = useState(0)
 
     useEffect(() => {
-        if (!api) {
-        return
-        }
-
+        if (!api) return
         api.on("select", () => {
-        setCurrent(api.selectedScrollSnap())
+            setCurrent(api.selectedScrollSnap())
         })
     }, [api])
 
     const scrollTo = useCallback(
-        (index) => {
-        api?.scrollTo(index)
-        },
+        (index) => { api?.scrollTo(index) },
         [api],
     )
 
     return(
-        <Element style={styles.container} name="projects" className="w-full p-0 pb-[150px]">
-            
-            <h2 className="mt-[150px] mb-[50px] md:mb-[75px] text-4xl text-center">Projects</h2>
-            
-            {/* Carousel Container */}
-            <Carousel
-            setApi={setApi}
-            plugins={[plugin.current]}
-            className="w-full"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-            >
-                <CarouselContent className="mx-auto">
-                    {projectsInfo.map(projInfo =>
-                        <CarouselItem key={projInfo.name} className="p-0">
-                            <ProjectsCard info={projInfo}/>
-                        </CarouselItem>
-                    )}
-                </CarouselContent>
-            </Carousel>
+        <Element name="projects">
+            <section className="py-24 md:py-32">
+                <div className="max-w-6xl mx-auto px-6">
+                    {/* Section header */}
+                    <div className="mb-16">
+                        <p className="text-sm font-mono text-primary tracking-wider uppercase mb-3">Portfolio</p>
+                        <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight text-balance">
+                            Selected Projects
+                        </h2>
+                        <p className="mt-4 text-muted-foreground max-w-2xl leading-relaxed">
+                            {"A curated selection of projects showcasing my expertise in full-stack development, AI integration, interactive mapping, UI/UX design, and progressive web applications. Each project reflects my commitment to building performant, user-centered digital solutions with modern technologies."}
+                        </p>
+                    </div>
 
-            {/* Carousel Controllers */}
-            <div style={styles.container} className="flex justify-center gap-2 mt-8 max-w-min mx-auto">
-            {projectsInfo.map((_, index) => (
-                <button
-                key={index}
-                onClick={() => scrollTo(index)}
-                className={cn("w-8 md:w-12 h-1.5 rounded-full transition-colors", current === index ? "bg-[#FDC05D]" : "bg-[#D4C2FC]")}
-                aria-label={`Go to slide ${index + 1}`}
-                />
-            ))}
-            </div>
+                    {/* Carousel */}
+                    <Carousel
+                        setApi={setApi}
+                        plugins={[plugin.current]}
+                        className="w-full"
+                        onMouseEnter={plugin.current.stop}
+                        onMouseLeave={plugin.current.reset}
+                    >
+                        <CarouselContent className="-ml-4">
+                            {projectsInfo.map(projInfo =>
+                                <CarouselItem key={projInfo.name} className="pl-4 md:basis-1/2 lg:basis-1/2">
+                                    <ProjectsCard info={projInfo}/>
+                                </CarouselItem>
+                            )}
+                        </CarouselContent>
+                    </Carousel>
+
+                    {/* Carousel dots */}
+                    <div className="flex justify-center gap-2 mt-10">
+                        {projectsInfo.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => scrollTo(index)}
+                                className={`w-8 h-1.5 rounded-full transition-all duration-300 ${current === index ? 'bg-primary w-12' : 'bg-secondary hover:bg-muted-foreground/30'}`}
+                                aria-label={`Go to project ${index + 1}`}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
         </Element>
     )
 }
