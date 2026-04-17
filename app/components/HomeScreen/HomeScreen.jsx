@@ -33,13 +33,13 @@ const HomeScreen = () => {
                             {/* Body paragraphs - SEO rich */}
                             <div className="mt-8 flex flex-col gap-5 text-base md:text-lg leading-relaxed text-muted-foreground">
                                 <p className="opacity-0 animate-fade-in-up animate-delay-200">
-                                    {"I'm Livio Reinoso, a Senior Front-End Developer and AI Software Engineer based in London, Ontario. With a deep focus on React.js, Next.js, and TypeScript, I craft fast, accessible, and scalable digital products that bring real value to businesses and their users."}
+                                    {"I'm Livio Reinoso, a Senior Front-End Developer and AI Software Engineer based in Buenos Aires, Argentina, with a global mindset shaped by collaborating with distributed teams across North America and beyond, with strong experience working alongside professionals in Canada and the United States. I specialize in building fast, accessible, and scalable digital products that create measurable value for businesses and their users."}
                                 </p>
                                 <p className="opacity-0 animate-fade-in-up animate-delay-300">
-                                    {"My expertise lies at the intersection of modern front-end development and artificial intelligence. From building AI-powered chatbots and search engines to developing SaaS platforms that streamline complex business operations, I approach every project with a user-centered, performance-focused mindset."}
+                                    {"My expertise sits at the intersection of modern front-end engineering and artificial intelligence. With deep experience in React.js, Next.js, and TypeScript, I build high-performance web applications, AI-powered chatbots, intelligent search experiences, and SaaS platforms that simplify complex operations and improve user engagement."}
                                 </p>
                                 <p className="opacity-0 animate-fade-in-up animate-delay-400">
-                                    {"Whether it's translating pixel-perfect Figma designs into production-ready code, integrating OpenAI and Gemini AI APIs for intelligent automation, or architecting serverless solutions on Vercel and Firebase, I bring the technical depth and creative problem-solving needed to deliver outstanding digital experiences."}
+                                    {"Whether translating pixel-perfect Figma designs into production-ready code, integrating OpenAI and Gemini APIs for smart automation, or architecting modern cloud solutions with Vercel and Firebase, I bring the technical depth, adaptability, and product thinking required to deliver world-class digital experiences for international teams and markets."}
                                 </p>
                             </div>
 
